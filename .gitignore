@@ -23,6 +23,9 @@ training_metrics.json
 # Jupyter
 .ipynb_checkpoints/
 
+# Cursor / IDE
+.cursor/
+
 # OS
 .DS_Store
 Thumbs.db

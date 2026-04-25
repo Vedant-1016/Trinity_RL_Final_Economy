@@ -2,10 +2,16 @@ import os
 import json
 import re
 from groq import Groq
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from product_catalog import sample_products
 
-load_dotenv()
+# Load `.env` robustly (works from repo root or nested folder).
+# We avoid printing or otherwise exposing secrets.
+dotenv_path = find_dotenv(usecwd=True)
+if dotenv_path:
+    load_dotenv(dotenv_path)
+if not os.environ.get("GROQ_API_KEY"):
+    load_dotenv(os.path.join(os.path.dirname(__file__), "Trinity_RL_Final_Economy-main", ".env"))
 
 class Council:
     def __init__(self, api_key=None):
