@@ -1,0 +1,6 @@
+name: "pricing-pro-v1"
+description: "A multi-agent market simulation for teaching LLMs emergent strategic pricing behavior."
+version: "1.0.0"
+entrypoint: "environment:PricingProEnv"
+requirements:
+  - numpy

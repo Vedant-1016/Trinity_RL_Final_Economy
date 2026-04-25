@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Model checkpoints & training artifacts
+pricing_pro_model/
+final_pricing_pro_model/
+patched_model_temp/
+rlhf_buffer.jsonl
+training_metrics.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

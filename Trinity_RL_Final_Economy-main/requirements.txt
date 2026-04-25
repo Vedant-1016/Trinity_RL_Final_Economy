@@ -1,0 +1,24 @@
+# Core Frameworks for Training
+unsloth
+torch
+transformers
+trl
+peft
+accelerate
+bitsandbytes
+
+# API and Environment
+groq
+python-dotenv
+huggingface_hub
+
+# Dashboard and Visualization
+streamlit
+pandas
+plotly
+
+# Utilities
+numpy
+scipy
+matplotlib
+pyyaml
