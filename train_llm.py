@@ -25,8 +25,8 @@ MAX_SEQ_LENGTH = 2048
 OUTPUT_DIR = "pricing_pro_model"
 METRICS_PATH = "training_metrics.json"
 SFT_SAMPLES = int(os.environ.get("SFT_SAMPLES", "200"))
-HEURISTIC_SCENARIOS = int(os.environ.get("HEURISTIC_SCENARIOS", "4000"))
-COUNCIL_SCENARIOS = int(os.environ.get("COUNCIL_SCENARIOS", "500"))
+HEURISTIC_SCENARIOS = int(os.environ.get("HEURISTIC_SCENARIOS", "2000"))
+COUNCIL_SCENARIOS = int(os.environ.get("COUNCIL_SCENARIOS", "25"))
 
 # --- 1. INITIALIZE MODELS & ENGINES ---
 print(">>> INITIALIZING AGENT MODEL (UNSLOTH)...")
@@ -45,18 +45,39 @@ model = FastLanguageModel.get_peft_model(
     bias = "none",
 )
 
+# Avoid noisy generate() warning when max_new_tokens is explicitly provided.
+if hasattr(model, "generation_config") and getattr(model.generation_config, "max_length", None) is not None:
+    model.generation_config.max_length = None
+
 persona_engine = PersonaEngine()
 council = Council()
 reviewer_engine = ReviewerEngine(council_instance=council)
 
 # Helper to extract JSON from model output
 def extract_json(text):
-    try:
-        match = re.search(r'\{.*\}', text, re.DOTALL)
-        if match:
-            return json.loads(match.group())
-    except:
+    if not isinstance(text, str) or not text.strip():
         return None
+
+    decoder = json.JSONDecoder()
+    candidates = []
+    for match in re.finditer(r"\{", text):
+        try:
+            obj, _ = decoder.raw_decode(text[match.start():])
+            if isinstance(obj, dict):
+                candidates.append(obj)
+        except json.JSONDecodeError:
+            continue
+
+    if not candidates:
+        return None
+
+    # Prefer a dict that contains the key we need for review.
+    for candidate in reversed(candidates):
+        if "prices" in candidate and isinstance(candidate["prices"], dict):
+            return candidate
+
+    # Fallback: return the last valid object generated.
+    return candidates[-1]
     return None
 
 # --- 2. PHASE 1: SFT BOOTSTRAP (200 SAMPLES) ---
@@ -66,14 +87,29 @@ def run_sft_phase():
         print("Error: sft_dataset.json not found. Run generate_sft_data.py first.")
         return
         
-    with open("sft_dataset.json", "r") as f:
-        dataset = json.load(f)
+    with open("sft_dataset.json", "r", encoding="utf-8") as f:
+        raw_dataset = json.load(f)
+
+    # Train on instruction + input + target output so the model learns
+    # the exact JSON response format required during RL loops.
+    dataset = []
+    for sample in raw_dataset:
+        instruction = sample.get("instruction", "")
+        model_input = sample.get("input", "")
+        model_output = sample.get("output", "")
+        full_text = (
+            "System: You are an AI-CFO. Output prices in JSON format.\n\n"
+            f"{instruction}\n"
+            f"{model_input}\n"
+            f"Output: {model_output}"
+        )
+        dataset.append({"text": full_text})
         
     trainer = SFTTrainer(
         model = model,
         tokenizer = tokenizer,
         train_dataset = dataset,
-        dataset_text_field = "instruction", 
+        dataset_text_field = "text",
         max_seq_length = MAX_SEQ_LENGTH,
         args = TrainingArguments(
             per_device_train_batch_size = 2,
@@ -109,15 +145,28 @@ def run_online_rl(num_scenarios=4000, mode="heuristic"):
             scenario = f"Scenario: A customer with {dna_dict['economic']} budget and {dna_dict['driver']} motivation is looking to buy."
 
         # THE 3-LOOP CONVERGENCE ENGINE
-        current_prompt = f"System: You are an AI-CFO. Output prices in JSON format.\n\nScenario: {scenario}\nProducts: {json.dumps(products)}"
-        
+        current_prompt = (
+            "System: You are an AI-CFO. Output prices in JSON format.\n\n"
+            f"Scenario: {scenario}\n"
+            f"Products: {json.dumps(products)}\n"
+            "Output:"
+        )
+
         for loop in range(3):
             # A. Model Predicts Price
             inputs = tokenizer([current_prompt], return_tensors = "pt").to("cuda")
-            outputs = model.generate(**inputs, max_new_tokens = 200)
-            prediction = tokenizer.batch_decode(outputs)[0]
+            outputs = model.generate(
+                **inputs,
+                max_new_tokens = 200,
+                do_sample = False,
+                eos_token_id = tokenizer.eos_token_id,
+                pad_token_id = tokenizer.eos_token_id,
+            )
+            generated_tokens = outputs[:, inputs.input_ids.shape[1]:]
+            prediction = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)[0]
             
             ai_data = extract_json(prediction)
+            ai_prices = {}
             
             if not ai_data or 'prices' not in ai_data:
                 success, reward, critique = False, -20.0, "Invalid JSON format. You MUST provide a JSON with the 'prices' key."
@@ -128,7 +177,7 @@ def run_online_rl(num_scenarios=4000, mode="heuristic"):
                     success, reward, critique = reviewer_engine.heuristic_review(ai_prices, dna_dict, products, {}, comp_prices)
                 else:
                     success, reward, critique = reviewer_engine.council_review(ai_prices, scenario, dna_dict, products)
-            
+
             # --- LIVE BACK-PROPAGATION (ERROR-DRIVEN LEARNING) ---
             # We construct a training target that includes the feedback
             if success:
@@ -147,7 +196,7 @@ def run_online_rl(num_scenarios=4000, mode="heuristic"):
             train_labels = train_inputs.input_ids.clone()
             
             # Scaling the loss by the absolute value of the reward/penalty, bounded for stability
-            loss_multiplier = max(min(abs(reward) / 10.0, 5.0), 0.1) 
+            loss_multiplier = max(min(abs(reward) / 10.0, 5.0), 0.1)
             
             outputs = model(**train_inputs, labels=train_labels)
             loss = outputs.loss * loss_multiplier

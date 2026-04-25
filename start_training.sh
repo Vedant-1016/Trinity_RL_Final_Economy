@@ -27,4 +27,4 @@ echo "============================================================"
 # This runs the wrapper script your friend made, which handles SFT generation,
 # Phase 1, Phase 2, Phase 3, and automatically plots the graphs!
 # It will stream the output live to your console and save it to train_run.log
-python tools/run_long_training.py --sft-samples 200 --heuristic-scenarios 4000 --council-scenarios 500
+python tools/run_long_training.py --sft-samples 200 --heuristic-scenarios 2000 --council-scenarios 25

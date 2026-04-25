@@ -47,8 +47,8 @@ def main():
         description="Run full SFT + online training in one go with live logs."
     )
     parser.add_argument("--sft-samples", type=int, default=200)
-    parser.add_argument("--heuristic-scenarios", type=int, default=4000)
-    parser.add_argument("--council-scenarios", type=int, default=500)
+    parser.add_argument("--heuristic-scenarios", type=int, default=2000)
+    parser.add_argument("--council-scenarios", type=int, default=25)
     parser.add_argument("--skip-sft-generation", action="store_true")
     parser.add_argument("--log-file", default="train_run.log")
     args = parser.parse_args()
