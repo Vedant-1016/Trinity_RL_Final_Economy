@@ -1,6 +1,6 @@
 ---
 title: OpenEnv Training
-emoji: 💻🐳
+emoji: "💻🐳"
 colorFrom: gray
 colorTo: green
 sdk: docker
@@ -16,4 +16,3 @@ This Space is set up for **GPU training + JupyterLab** for the Pricing Pro / Ope
 
 - **Run training**: use the terminal and execute `bash start_training.sh`
 - **Secrets**: set `HF_TOKEN` and `GROQ_API_KEY` in Space **Secrets** (do not commit them)
-
