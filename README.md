@@ -6,8 +6,14 @@ colorTo: green
 sdk: docker
 pinned: false
 tags:
-- jupyterlab
+  - jupyterlab
 suggested_storage: small
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+## Pricing Pro (Training Space)
+
+This Space is set up for **GPU training + JupyterLab** for the Pricing Pro / OpenEnv project.
+
+- **Run training**: use the terminal and execute `bash start_training.sh`
+- **Secrets**: set `HF_TOKEN` and `GROQ_API_KEY` in Space **Secrets** (do not commit them)
+

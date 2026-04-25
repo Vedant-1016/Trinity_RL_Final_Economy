@@ -1,0 +1,1002 @@
+[
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.87. The customer is evaluating Mechanical_Keyboard, Gaming_Mouse, Smart_Speaker, Protein_Powder, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 116.62}, {\"name\": \"Gaming_Mouse\", \"cost\": 51.94}, {\"name\": \"Smart_Speaker\", \"cost\": 63.66}, {\"name\": \"Protein_Powder\", \"cost\": 37.23}, {\"name\": \"Blender\", \"cost\": 81.73}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.87}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 145.78,\n    \"Gaming_Mouse\": 64.92,\n    \"Smart_Speaker\": 79.57,\n    \"Protein_Powder\": 46.54,\n    \"Blender\": 102.16\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.11. The customer is evaluating Coffee_Beans_1kg, Standard_Earbuds, Blender, Smart_Speaker, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 25.21}, {\"name\": \"Standard_Earbuds\", \"cost\": 39.96}, {\"name\": \"Blender\", \"cost\": 75.96}, {\"name\": \"Smart_Speaker\", \"cost\": 65.78}, {\"name\": \"Budget_Cable\", \"cost\": 11.44}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.11}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 31.51,\n    \"Standard_Earbuds\": 49.95,\n    \"Blender\": 94.95,\n    \"Smart_Speaker\": 82.22,\n    \"Budget_Cable\": 14.3\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.75. The customer is evaluating Running_Shoes, Air_Fryer, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 69.17}, {\"name\": \"Air_Fryer\", \"cost\": 111.37}, {\"name\": \"Leather_Boots\", \"cost\": 77.42}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.75}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 86.46,\n    \"Air_Fryer\": 139.21,\n    \"Leather_Boots\": 96.78\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.39. The customer is evaluating Air_Fryer, Office_Chair, Protein_Powder, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 106.1}, {\"name\": \"Office_Chair\", \"cost\": 120.48}, {\"name\": \"Protein_Powder\", \"cost\": 43.0}, {\"name\": \"Smart_Speaker\", \"cost\": 32.18}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.39}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 132.62,\n    \"Office_Chair\": 150.6,\n    \"Protein_Powder\": 53.75,\n    \"Smart_Speaker\": 40.23\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.84. The customer is evaluating Running_Shoes, Protein_Powder, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 93.87}, {\"name\": \"Protein_Powder\", \"cost\": 20.62}, {\"name\": \"Premium_Watch\", \"cost\": 211.61}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.84}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 117.34,\n    \"Protein_Powder\": 25.78,\n    \"Premium_Watch\": 264.51\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.44. The customer is evaluating Mechanical_Keyboard, Budget_Cable, Air_Fryer, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 56.13}, {\"name\": \"Budget_Cable\", \"cost\": 3.96}, {\"name\": \"Air_Fryer\", \"cost\": 78.87}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 8.61}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.44}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 70.16,\n    \"Budget_Cable\": 4.95,\n    \"Air_Fryer\": 98.59,\n    \"Coffee_Beans_1kg\": 10.76\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.51. The customer is evaluating Designer_Handbag, Standard_Earbuds, Smart_Speaker, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 216.2}, {\"name\": \"Standard_Earbuds\", \"cost\": 49.08}, {\"name\": \"Smart_Speaker\", \"cost\": 27.73}, {\"name\": \"Air_Fryer\", \"cost\": 54.28}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.51}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 270.25,\n    \"Standard_Earbuds\": 61.35,\n    \"Smart_Speaker\": 34.66,\n    \"Air_Fryer\": 67.85\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.79. The customer is evaluating Cotton_Tee, Running_Shoes, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 21.81}, {\"name\": \"Running_Shoes\", \"cost\": 86.68}, {\"name\": \"Blender\", \"cost\": 37.65}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.79}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 27.26,\n    \"Running_Shoes\": 108.35,\n    \"Blender\": 47.06\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.55. The customer is evaluating Designer_Handbag, Coffee_Beans_1kg, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 248.58}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 29.01}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 79.67}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.55}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 310.73,\n    \"Coffee_Beans_1kg\": 36.26,\n    \"Mechanical_Keyboard\": 99.59\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.7. The customer is evaluating Budget_Cable, Leather_Boots, Coffee_Beans_1kg, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 3.74}, {\"name\": \"Leather_Boots\", \"cost\": 119.72}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 14.75}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 110.11}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.7}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 4.68,\n    \"Leather_Boots\": 149.65,\n    \"Coffee_Beans_1kg\": 18.44,\n    \"Mechanical_Keyboard\": 137.64\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.19. The customer is evaluating Air_Fryer, Running_Shoes, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 87.35}, {\"name\": \"Running_Shoes\", \"cost\": 58.58}, {\"name\": \"Blender\", \"cost\": 57.84}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.19}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 109.19,\n    \"Running_Shoes\": 73.22,\n    \"Blender\": 72.3\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.89. The customer is evaluating Office_Chair, Designer_Handbag, Protein_Powder, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 203.62}, {\"name\": \"Designer_Handbag\", \"cost\": 289.56}, {\"name\": \"Protein_Powder\", \"cost\": 48.86}, {\"name\": \"Premium_Watch\", \"cost\": 174.28}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.89}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 254.53,\n    \"Designer_Handbag\": 361.95,\n    \"Protein_Powder\": 61.08,\n    \"Premium_Watch\": 217.85\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.9. The customer is evaluating Coffee_Beans_1kg, Mechanical_Keyboard, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 13.55}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 58.32}, {\"name\": \"Smart_Speaker\", \"cost\": 29.83}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.9}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 16.94,\n    \"Mechanical_Keyboard\": 72.9,\n    \"Smart_Speaker\": 37.29\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.7. The customer is evaluating Coffee_Beans_1kg, Running_Shoes, Premium_Watch, Smart_Speaker, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 10.94}, {\"name\": \"Running_Shoes\", \"cost\": 46.81}, {\"name\": \"Premium_Watch\", \"cost\": 146.11}, {\"name\": \"Smart_Speaker\", \"cost\": 51.64}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 96.01}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.7}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 13.67,\n    \"Running_Shoes\": 58.51,\n    \"Premium_Watch\": 182.64,\n    \"Smart_Speaker\": 64.55,\n    \"Mechanical_Keyboard\": 120.01\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.3. The customer is evaluating Running_Shoes, Designer_Handbag, Mechanical_Keyboard, Office_Chair, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 81.06}, {\"name\": \"Designer_Handbag\", \"cost\": 247.96}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 54.17}, {\"name\": \"Office_Chair\", \"cost\": 101.16}, {\"name\": \"Premium_Watch\", \"cost\": 195.5}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.3}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 101.33,\n    \"Designer_Handbag\": 309.95,\n    \"Mechanical_Keyboard\": 67.71,\n    \"Office_Chair\": 126.45,\n    \"Premium_Watch\": 244.38\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.57. The customer is evaluating Cotton_Tee, Leather_Boots, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 19.21}, {\"name\": \"Leather_Boots\", \"cost\": 119.54}, {\"name\": \"Air_Fryer\", \"cost\": 103.07}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.57}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 24.01,\n    \"Leather_Boots\": 149.43,\n    \"Air_Fryer\": 128.84\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.52. The customer is evaluating Blender, Air_Fryer, Coffee_Beans_1kg, Mechanical_Keyboard, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 27.34}, {\"name\": \"Air_Fryer\", \"cost\": 93.01}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 27.13}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 45.62}, {\"name\": \"Premium_Watch\", \"cost\": 150.58}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.52}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 34.17,\n    \"Air_Fryer\": 116.26,\n    \"Coffee_Beans_1kg\": 33.91,\n    \"Mechanical_Keyboard\": 57.02,\n    \"Premium_Watch\": 188.23\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.6. The customer is evaluating Standard_Earbuds, Leather_Boots, Gaming_Mouse, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 37.61}, {\"name\": \"Leather_Boots\", \"cost\": 68.9}, {\"name\": \"Gaming_Mouse\", \"cost\": 25.05}, {\"name\": \"Cotton_Tee\", \"cost\": 10.58}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.6}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 47.01,\n    \"Leather_Boots\": 86.12,\n    \"Gaming_Mouse\": 31.31,\n    \"Cotton_Tee\": 13.22\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.48. The customer is evaluating Office_Chair, Gaming_Mouse, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 200.3}, {\"name\": \"Gaming_Mouse\", \"cost\": 52.05}, {\"name\": \"Protein_Powder\", \"cost\": 23.41}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.48}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 250.38,\n    \"Gaming_Mouse\": 65.06,\n    \"Protein_Powder\": 29.26\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.33. The customer is evaluating Cotton_Tee, Coffee_Beans_1kg, Running_Shoes, Gaming_Mouse, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 11.93}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 21.7}, {\"name\": \"Running_Shoes\", \"cost\": 44.12}, {\"name\": \"Gaming_Mouse\", \"cost\": 27.33}, {\"name\": \"Smart_Speaker\", \"cost\": 60.68}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.33}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 14.91,\n    \"Coffee_Beans_1kg\": 27.12,\n    \"Running_Shoes\": 55.15,\n    \"Gaming_Mouse\": 34.16,\n    \"Smart_Speaker\": 75.85\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.18. The customer is evaluating Protein_Powder, Budget_Cable, Mechanical_Keyboard, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 53.93}, {\"name\": \"Budget_Cable\", \"cost\": 4.92}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 63.48}, {\"name\": \"Running_Shoes\", \"cost\": 81.23}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.18}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 67.41,\n    \"Budget_Cable\": 6.15,\n    \"Mechanical_Keyboard\": 79.35,\n    \"Running_Shoes\": 101.54\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.88. The customer is evaluating Standard_Earbuds, Blender, Budget_Cable, Running_Shoes, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 56.67}, {\"name\": \"Blender\", \"cost\": 65.54}, {\"name\": \"Budget_Cable\", \"cost\": 5.18}, {\"name\": \"Running_Shoes\", \"cost\": 93.61}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 16.93}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.88}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 70.84,\n    \"Blender\": 81.93,\n    \"Budget_Cable\": 6.47,\n    \"Running_Shoes\": 117.01,\n    \"Coffee_Beans_1kg\": 21.16\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.74. The customer is evaluating Gaming_Mouse, Designer_Handbag, Standard_Earbuds, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 53.89}, {\"name\": \"Designer_Handbag\", \"cost\": 212.27}, {\"name\": \"Standard_Earbuds\", \"cost\": 24.69}, {\"name\": \"Blender\", \"cost\": 79.95}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.74}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 67.36,\n    \"Designer_Handbag\": 265.34,\n    \"Standard_Earbuds\": 30.86,\n    \"Blender\": 99.94\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.63. The customer is evaluating Office_Chair, Mechanical_Keyboard, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 128.13}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 62.35}, {\"name\": \"Designer_Handbag\", \"cost\": 325.19}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.63}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 160.16,\n    \"Mechanical_Keyboard\": 77.94,\n    \"Designer_Handbag\": 406.49\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.29. The customer is evaluating Designer_Handbag, Protein_Powder, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 348.3}, {\"name\": \"Protein_Powder\", \"cost\": 35.39}, {\"name\": \"Standard_Earbuds\", \"cost\": 38.65}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.29}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 435.38,\n    \"Protein_Powder\": 44.24,\n    \"Standard_Earbuds\": 48.31\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.31. The customer is evaluating Standard_Earbuds, Gaming_Mouse, Office_Chair, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 41.93}, {\"name\": \"Gaming_Mouse\", \"cost\": 34.27}, {\"name\": \"Office_Chair\", \"cost\": 196.67}, {\"name\": \"Budget_Cable\", \"cost\": 5.02}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.31}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 52.41,\n    \"Gaming_Mouse\": 42.84,\n    \"Office_Chair\": 245.84,\n    \"Budget_Cable\": 6.27\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.53. The customer is evaluating Air_Fryer, Blender, Coffee_Beans_1kg, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 73.17}, {\"name\": \"Blender\", \"cost\": 67.03}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 23.64}, {\"name\": \"Gaming_Mouse\", \"cost\": 45.67}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.53}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 91.46,\n    \"Blender\": 83.79,\n    \"Coffee_Beans_1kg\": 29.55,\n    \"Gaming_Mouse\": 57.09\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.78. The customer is evaluating Standard_Earbuds, Office_Chair, Coffee_Beans_1kg, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 45.62}, {\"name\": \"Office_Chair\", \"cost\": 148.09}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 27.85}, {\"name\": \"Running_Shoes\", \"cost\": 62.22}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.78}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 57.02,\n    \"Office_Chair\": 185.11,\n    \"Coffee_Beans_1kg\": 34.81,\n    \"Running_Shoes\": 77.78\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.92. The customer is evaluating Budget_Cable, Gaming_Mouse, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 5.59}, {\"name\": \"Gaming_Mouse\", \"cost\": 23.05}, {\"name\": \"Designer_Handbag\", \"cost\": 225.31}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.92}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 6.99,\n    \"Gaming_Mouse\": 28.81,\n    \"Designer_Handbag\": 281.64\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.85. The customer is evaluating Mechanical_Keyboard, Designer_Handbag, Gaming_Mouse, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 41.95}, {\"name\": \"Designer_Handbag\", \"cost\": 381.23}, {\"name\": \"Gaming_Mouse\", \"cost\": 41.13}, {\"name\": \"Budget_Cable\", \"cost\": 4.88}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.85}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 52.44,\n    \"Designer_Handbag\": 476.54,\n    \"Gaming_Mouse\": 51.41,\n    \"Budget_Cable\": 6.1\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.82. The customer is evaluating Budget_Cable, Cotton_Tee, Designer_Handbag, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 3.31}, {\"name\": \"Cotton_Tee\", \"cost\": 9.81}, {\"name\": \"Designer_Handbag\", \"cost\": 215.71}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 28.53}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.82}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 4.14,\n    \"Cotton_Tee\": 12.26,\n    \"Designer_Handbag\": 269.64,\n    \"Coffee_Beans_1kg\": 35.66\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.15. The customer is evaluating Leather_Boots, Air_Fryer, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 78.99}, {\"name\": \"Air_Fryer\", \"cost\": 129.68}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 116.34}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.15}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 98.74,\n    \"Air_Fryer\": 162.1,\n    \"Mechanical_Keyboard\": 145.43\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.15 and sentiment=0.56. The customer is evaluating Cotton_Tee, Smart_Speaker, Mechanical_Keyboard, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 9.55}, {\"name\": \"Smart_Speaker\", \"cost\": 28.64}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 55.46}, {\"name\": \"Premium_Watch\", \"cost\": 194.45}]\nMarket Conditions: {\"inflation\": 0.15, \"sentiment\": 0.56}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 11.94,\n    \"Smart_Speaker\": 35.8,\n    \"Mechanical_Keyboard\": 69.33,\n    \"Premium_Watch\": 243.06\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.99. The customer is evaluating Premium_Watch, Blender, Designer_Handbag, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 127.75}, {\"name\": \"Blender\", \"cost\": 82.29}, {\"name\": \"Designer_Handbag\", \"cost\": 272.49}, {\"name\": \"Gaming_Mouse\", \"cost\": 48.01}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.99}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 159.69,\n    \"Blender\": 102.86,\n    \"Designer_Handbag\": 340.61,\n    \"Gaming_Mouse\": 60.01\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.34. The customer is evaluating Standard_Earbuds, Coffee_Beans_1kg, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 27.25}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 24.69}, {\"name\": \"Premium_Watch\", \"cost\": 174.51}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.34}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 34.06,\n    \"Coffee_Beans_1kg\": 30.86,\n    \"Premium_Watch\": 218.14\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.88. The customer is evaluating Designer_Handbag, Premium_Watch, Coffee_Beans_1kg, Cotton_Tee, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 400.65}, {\"name\": \"Premium_Watch\", \"cost\": 174.35}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 25.87}, {\"name\": \"Cotton_Tee\", \"cost\": 14.78}, {\"name\": \"Gaming_Mouse\", \"cost\": 42.45}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.88}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 500.81,\n    \"Premium_Watch\": 217.94,\n    \"Coffee_Beans_1kg\": 32.34,\n    \"Cotton_Tee\": 18.47,\n    \"Gaming_Mouse\": 53.06\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.2. The customer is evaluating Blender, Standard_Earbuds, Designer_Handbag, Premium_Watch, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 71.45}, {\"name\": \"Standard_Earbuds\", \"cost\": 24.99}, {\"name\": \"Designer_Handbag\", \"cost\": 269.01}, {\"name\": \"Premium_Watch\", \"cost\": 126.62}, {\"name\": \"Office_Chair\", \"cost\": 95.28}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.2}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 89.31,\n    \"Standard_Earbuds\": 31.24,\n    \"Designer_Handbag\": 336.26,\n    \"Premium_Watch\": 158.28,\n    \"Office_Chair\": 119.1\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.84. The customer is evaluating Coffee_Beans_1kg, Office_Chair, Budget_Cable, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 20.51}, {\"name\": \"Office_Chair\", \"cost\": 60.8}, {\"name\": \"Budget_Cable\", \"cost\": 9.71}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 82.53}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.84}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 25.64,\n    \"Office_Chair\": 76.0,\n    \"Budget_Cable\": 12.14,\n    \"Mechanical_Keyboard\": 103.16\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.98. The customer is evaluating Blender, Budget_Cable, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 68.17}, {\"name\": \"Budget_Cable\", \"cost\": 6.13}, {\"name\": \"Premium_Watch\", \"cost\": 219.99}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.98}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 85.21,\n    \"Budget_Cable\": 7.66,\n    \"Premium_Watch\": 274.99\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.63. The customer is evaluating Air_Fryer, Standard_Earbuds, Office_Chair, Premium_Watch, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 45.09}, {\"name\": \"Standard_Earbuds\", \"cost\": 52.09}, {\"name\": \"Office_Chair\", \"cost\": 49.7}, {\"name\": \"Premium_Watch\", \"cost\": 203.66}, {\"name\": \"Running_Shoes\", \"cost\": 52.75}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.63}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 56.36,\n    \"Standard_Earbuds\": 65.11,\n    \"Office_Chair\": 62.12,\n    \"Premium_Watch\": 254.57,\n    \"Running_Shoes\": 65.94\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.62. The customer is evaluating Air_Fryer, Coffee_Beans_1kg, Cotton_Tee, Standard_Earbuds, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 92.03}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 29.88}, {\"name\": \"Cotton_Tee\", \"cost\": 21.55}, {\"name\": \"Standard_Earbuds\", \"cost\": 27.77}, {\"name\": \"Running_Shoes\", \"cost\": 72.82}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.62}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 115.04,\n    \"Coffee_Beans_1kg\": 37.35,\n    \"Cotton_Tee\": 26.94,\n    \"Standard_Earbuds\": 34.71,\n    \"Running_Shoes\": 91.02\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.71. The customer is evaluating Premium_Watch, Standard_Earbuds, Budget_Cable, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 205.86}, {\"name\": \"Standard_Earbuds\", \"cost\": 22.34}, {\"name\": \"Budget_Cable\", \"cost\": 3.42}, {\"name\": \"Designer_Handbag\", \"cost\": 353.27}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.71}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 257.33,\n    \"Standard_Earbuds\": 27.93,\n    \"Budget_Cable\": 4.28,\n    \"Designer_Handbag\": 441.59\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.13. The customer is evaluating Office_Chair, Premium_Watch, Air_Fryer, Leather_Boots, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 129.76}, {\"name\": \"Premium_Watch\", \"cost\": 212.97}, {\"name\": \"Air_Fryer\", \"cost\": 114.74}, {\"name\": \"Leather_Boots\", \"cost\": 104.89}, {\"name\": \"Running_Shoes\", \"cost\": 28.41}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.13}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 162.2,\n    \"Premium_Watch\": 266.21,\n    \"Air_Fryer\": 143.42,\n    \"Leather_Boots\": 131.11,\n    \"Running_Shoes\": 35.51\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.19. The customer is evaluating Budget_Cable, Mechanical_Keyboard, Designer_Handbag, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 5.99}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 116.11}, {\"name\": \"Designer_Handbag\", \"cost\": 211.14}, {\"name\": \"Gaming_Mouse\", \"cost\": 22.53}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.19}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 7.49,\n    \"Mechanical_Keyboard\": 145.14,\n    \"Designer_Handbag\": 263.92,\n    \"Gaming_Mouse\": 28.16\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.83. The customer is evaluating Designer_Handbag, Running_Shoes, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 417.34}, {\"name\": \"Running_Shoes\", \"cost\": 31.47}, {\"name\": \"Air_Fryer\", \"cost\": 79.52}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.83}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 521.67,\n    \"Running_Shoes\": 39.34,\n    \"Air_Fryer\": 99.4\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.64. The customer is evaluating Running_Shoes, Protein_Powder, Budget_Cable, Smart_Speaker, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 94.01}, {\"name\": \"Protein_Powder\", \"cost\": 54.24}, {\"name\": \"Budget_Cable\", \"cost\": 4.23}, {\"name\": \"Smart_Speaker\", \"cost\": 26.18}, {\"name\": \"Standard_Earbuds\", \"cost\": 40.83}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.64}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 117.51,\n    \"Protein_Powder\": 67.8,\n    \"Budget_Cable\": 5.29,\n    \"Smart_Speaker\": 32.73,\n    \"Standard_Earbuds\": 51.04\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.58. The customer is evaluating Leather_Boots, Blender, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 111.08}, {\"name\": \"Blender\", \"cost\": 37.13}, {\"name\": \"Gaming_Mouse\", \"cost\": 51.92}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.58}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 138.85,\n    \"Blender\": 46.41,\n    \"Gaming_Mouse\": 64.9\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.44. The customer is evaluating Coffee_Beans_1kg, Leather_Boots, Office_Chair, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 16.25}, {\"name\": \"Leather_Boots\", \"cost\": 69.76}, {\"name\": \"Office_Chair\", \"cost\": 189.68}, {\"name\": \"Designer_Handbag\", \"cost\": 195.17}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.44}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 20.31,\n    \"Leather_Boots\": 87.2,\n    \"Office_Chair\": 237.1,\n    \"Designer_Handbag\": 243.96\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.36. The customer is evaluating Gaming_Mouse, Coffee_Beans_1kg, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 21.41}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 19.5}, {\"name\": \"Office_Chair\", \"cost\": 62.39}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.36}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 26.76,\n    \"Coffee_Beans_1kg\": 24.38,\n    \"Office_Chair\": 77.99\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.67. The customer is evaluating Coffee_Beans_1kg, Leather_Boots, Smart_Speaker, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 22.5}, {\"name\": \"Leather_Boots\", \"cost\": 110.63}, {\"name\": \"Smart_Speaker\", \"cost\": 78.15}, {\"name\": \"Standard_Earbuds\", \"cost\": 54.97}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.67}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 28.12,\n    \"Leather_Boots\": 138.29,\n    \"Smart_Speaker\": 97.69,\n    \"Standard_Earbuds\": 68.71\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.53. The customer is evaluating Gaming_Mouse, Protein_Powder, Office_Chair, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 41.09}, {\"name\": \"Protein_Powder\", \"cost\": 23.82}, {\"name\": \"Office_Chair\", \"cost\": 118.77}, {\"name\": \"Premium_Watch\", \"cost\": 166.63}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.53}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 51.36,\n    \"Protein_Powder\": 29.77,\n    \"Office_Chair\": 148.46,\n    \"Premium_Watch\": 208.29\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.24. The customer is evaluating Leather_Boots, Coffee_Beans_1kg, Office_Chair, Budget_Cable, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 111.52}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 15.78}, {\"name\": \"Office_Chair\", \"cost\": 192.37}, {\"name\": \"Budget_Cable\", \"cost\": 10.33}, {\"name\": \"Smart_Speaker\", \"cost\": 32.38}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.24}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 139.4,\n    \"Coffee_Beans_1kg\": 19.72,\n    \"Office_Chair\": 240.46,\n    \"Budget_Cable\": 12.91,\n    \"Smart_Speaker\": 40.48\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.58. The customer is evaluating Mechanical_Keyboard, Leather_Boots, Protein_Powder, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 65.46}, {\"name\": \"Leather_Boots\", \"cost\": 92.95}, {\"name\": \"Protein_Powder\", \"cost\": 38.21}, {\"name\": \"Running_Shoes\", \"cost\": 91.04}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.58}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 81.82,\n    \"Leather_Boots\": 116.19,\n    \"Protein_Powder\": 47.76,\n    \"Running_Shoes\": 113.8\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.43. The customer is evaluating Cotton_Tee, Designer_Handbag, Running_Shoes, Gaming_Mouse, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 14.73}, {\"name\": \"Designer_Handbag\", \"cost\": 411.16}, {\"name\": \"Running_Shoes\", \"cost\": 76.79}, {\"name\": \"Gaming_Mouse\", \"cost\": 35.51}, {\"name\": \"Blender\", \"cost\": 37.11}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.43}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 18.41,\n    \"Designer_Handbag\": 513.95,\n    \"Running_Shoes\": 95.99,\n    \"Gaming_Mouse\": 44.39,\n    \"Blender\": 46.39\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.26. The customer is evaluating Designer_Handbag, Leather_Boots, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 256.38}, {\"name\": \"Leather_Boots\", \"cost\": 54.37}, {\"name\": \"Standard_Earbuds\", \"cost\": 47.83}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.26}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 320.48,\n    \"Leather_Boots\": 67.96,\n    \"Standard_Earbuds\": 59.79\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.69. The customer is evaluating Premium_Watch, Budget_Cable, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 203.71}, {\"name\": \"Budget_Cable\", \"cost\": 7.76}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 11.36}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.69}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 254.64,\n    \"Budget_Cable\": 9.7,\n    \"Coffee_Beans_1kg\": 14.2\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.38. The customer is evaluating Standard_Earbuds, Coffee_Beans_1kg, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 26.3}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 20.62}, {\"name\": \"Protein_Powder\", \"cost\": 38.26}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.38}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 32.88,\n    \"Coffee_Beans_1kg\": 25.78,\n    \"Protein_Powder\": 47.82\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.58. The customer is evaluating Gaming_Mouse, Standard_Earbuds, Budget_Cable, Coffee_Beans_1kg, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 30.56}, {\"name\": \"Standard_Earbuds\", \"cost\": 55.72}, {\"name\": \"Budget_Cable\", \"cost\": 9.98}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 25.12}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 46.64}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.58}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 38.2,\n    \"Standard_Earbuds\": 69.65,\n    \"Budget_Cable\": 12.48,\n    \"Coffee_Beans_1kg\": 31.4,\n    \"Mechanical_Keyboard\": 58.3\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.32. The customer is evaluating Blender, Office_Chair, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 65.19}, {\"name\": \"Office_Chair\", \"cost\": 195.73}, {\"name\": \"Air_Fryer\", \"cost\": 77.56}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.32}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 81.49,\n    \"Office_Chair\": 244.66,\n    \"Air_Fryer\": 96.95\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.63. The customer is evaluating Premium_Watch, Leather_Boots, Standard_Earbuds, Office_Chair, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 137.3}, {\"name\": \"Leather_Boots\", \"cost\": 123.98}, {\"name\": \"Standard_Earbuds\", \"cost\": 45.3}, {\"name\": \"Office_Chair\", \"cost\": 163.75}, {\"name\": \"Air_Fryer\", \"cost\": 88.06}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.63}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 171.62,\n    \"Leather_Boots\": 154.97,\n    \"Standard_Earbuds\": 56.62,\n    \"Office_Chair\": 204.69,\n    \"Air_Fryer\": 110.08\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.97. The customer is evaluating Coffee_Beans_1kg, Office_Chair, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 19.29}, {\"name\": \"Office_Chair\", \"cost\": 179.99}, {\"name\": \"Smart_Speaker\", \"cost\": 85.11}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.97}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 24.11,\n    \"Office_Chair\": 224.99,\n    \"Smart_Speaker\": 106.39\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.1. The customer is evaluating Standard_Earbuds, Mechanical_Keyboard, Smart_Speaker, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 23.5}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 118.29}, {\"name\": \"Smart_Speaker\", \"cost\": 36.34}, {\"name\": \"Designer_Handbag\", \"cost\": 343.33}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.1}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 29.38,\n    \"Mechanical_Keyboard\": 147.86,\n    \"Smart_Speaker\": 45.43,\n    \"Designer_Handbag\": 429.16\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.8. The customer is evaluating Smart_Speaker, Running_Shoes, Air_Fryer, Protein_Powder, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 62.63}, {\"name\": \"Running_Shoes\", \"cost\": 44.49}, {\"name\": \"Air_Fryer\", \"cost\": 106.98}, {\"name\": \"Protein_Powder\", \"cost\": 52.83}, {\"name\": \"Premium_Watch\", \"cost\": 176.75}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.8}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 78.29,\n    \"Running_Shoes\": 55.61,\n    \"Air_Fryer\": 133.72,\n    \"Protein_Powder\": 66.04,\n    \"Premium_Watch\": 220.94\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.54. The customer is evaluating Smart_Speaker, Premium_Watch, Coffee_Beans_1kg, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 83.48}, {\"name\": \"Premium_Watch\", \"cost\": 148.58}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 13.93}, {\"name\": \"Gaming_Mouse\", \"cost\": 38.72}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.54}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 104.35,\n    \"Premium_Watch\": 185.73,\n    \"Coffee_Beans_1kg\": 17.41,\n    \"Gaming_Mouse\": 48.4\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.31. The customer is evaluating Standard_Earbuds, Premium_Watch, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 51.47}, {\"name\": \"Premium_Watch\", \"cost\": 216.65}, {\"name\": \"Leather_Boots\", \"cost\": 121.11}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.31}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 64.34,\n    \"Premium_Watch\": 270.81,\n    \"Leather_Boots\": 151.39\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.44. The customer is evaluating Mechanical_Keyboard, Office_Chair, Protein_Powder, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 117.1}, {\"name\": \"Office_Chair\", \"cost\": 143.04}, {\"name\": \"Protein_Powder\", \"cost\": 40.11}, {\"name\": \"Standard_Earbuds\", \"cost\": 22.2}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.44}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 146.38,\n    \"Office_Chair\": 178.8,\n    \"Protein_Powder\": 50.14,\n    \"Standard_Earbuds\": 27.75\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.77. The customer is evaluating Budget_Cable, Mechanical_Keyboard, Blender, Smart_Speaker, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 2.92}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 110.54}, {\"name\": \"Blender\", \"cost\": 54.58}, {\"name\": \"Smart_Speaker\", \"cost\": 53.18}, {\"name\": \"Protein_Powder\", \"cost\": 22.5}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.77}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 3.65,\n    \"Mechanical_Keyboard\": 138.18,\n    \"Blender\": 68.22,\n    \"Smart_Speaker\": 66.47,\n    \"Protein_Powder\": 28.12\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.52. The customer is evaluating Blender, Running_Shoes, Coffee_Beans_1kg, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 51.0}, {\"name\": \"Running_Shoes\", \"cost\": 28.44}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 23.61}, {\"name\": \"Cotton_Tee\", \"cost\": 15.07}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.52}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 63.75,\n    \"Running_Shoes\": 35.55,\n    \"Coffee_Beans_1kg\": 29.51,\n    \"Cotton_Tee\": 18.84\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.47. The customer is evaluating Running_Shoes, Premium_Watch, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 78.61}, {\"name\": \"Premium_Watch\", \"cost\": 124.69}, {\"name\": \"Air_Fryer\", \"cost\": 74.29}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.47}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 98.26,\n    \"Premium_Watch\": 155.86,\n    \"Air_Fryer\": 92.86\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.96. The customer is evaluating Budget_Cable, Leather_Boots, Standard_Earbuds, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 7.58}, {\"name\": \"Leather_Boots\", \"cost\": 74.7}, {\"name\": \"Standard_Earbuds\", \"cost\": 59.23}, {\"name\": \"Air_Fryer\", \"cost\": 118.73}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.96}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 9.47,\n    \"Leather_Boots\": 93.38,\n    \"Standard_Earbuds\": 74.04,\n    \"Air_Fryer\": 148.41\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.45. The customer is evaluating Gaming_Mouse, Smart_Speaker, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 35.31}, {\"name\": \"Smart_Speaker\", \"cost\": 81.02}, {\"name\": \"Leather_Boots\", \"cost\": 88.5}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.45}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 44.14,\n    \"Smart_Speaker\": 101.27,\n    \"Leather_Boots\": 110.62\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.37. The customer is evaluating Air_Fryer, Cotton_Tee, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 110.38}, {\"name\": \"Cotton_Tee\", \"cost\": 7.45}, {\"name\": \"Running_Shoes\", \"cost\": 59.41}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.37}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 137.97,\n    \"Cotton_Tee\": 9.31,\n    \"Running_Shoes\": 74.26\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.91. The customer is evaluating Cotton_Tee, Leather_Boots, Running_Shoes, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 21.61}, {\"name\": \"Leather_Boots\", \"cost\": 84.27}, {\"name\": \"Running_Shoes\", \"cost\": 78.76}, {\"name\": \"Office_Chair\", \"cost\": 74.58}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.91}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 27.01,\n    \"Leather_Boots\": 105.34,\n    \"Running_Shoes\": 98.45,\n    \"Office_Chair\": 93.22\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.6. The customer is evaluating Air_Fryer, Blender, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 101.79}, {\"name\": \"Blender\", \"cost\": 61.91}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 71.51}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.6}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 127.24,\n    \"Blender\": 77.39,\n    \"Mechanical_Keyboard\": 89.39\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.12. The customer is evaluating Air_Fryer, Mechanical_Keyboard, Blender, Cotton_Tee, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 75.14}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 85.5}, {\"name\": \"Blender\", \"cost\": 57.75}, {\"name\": \"Cotton_Tee\", \"cost\": 17.75}, {\"name\": \"Office_Chair\", \"cost\": 103.4}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.12}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 93.92,\n    \"Mechanical_Keyboard\": 106.88,\n    \"Blender\": 72.19,\n    \"Cotton_Tee\": 22.19,\n    \"Office_Chair\": 129.25\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.52. The customer is evaluating Office_Chair, Budget_Cable, Running_Shoes, Mechanical_Keyboard, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 134.7}, {\"name\": \"Budget_Cable\", \"cost\": 8.87}, {\"name\": \"Running_Shoes\", \"cost\": 79.59}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 37.5}, {\"name\": \"Smart_Speaker\", \"cost\": 83.36}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.52}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 168.38,\n    \"Budget_Cable\": 11.09,\n    \"Running_Shoes\": 99.49,\n    \"Mechanical_Keyboard\": 46.88,\n    \"Smart_Speaker\": 104.2\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.24. The customer is evaluating Smart_Speaker, Designer_Handbag, Blender, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 25.21}, {\"name\": \"Designer_Handbag\", \"cost\": 246.56}, {\"name\": \"Blender\", \"cost\": 53.73}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 26.32}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.24}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 31.51,\n    \"Designer_Handbag\": 308.2,\n    \"Blender\": 67.16,\n    \"Coffee_Beans_1kg\": 32.9\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.84. The customer is evaluating Designer_Handbag, Office_Chair, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 272.0}, {\"name\": \"Office_Chair\", \"cost\": 184.97}, {\"name\": \"Blender\", \"cost\": 60.85}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.84}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 340.0,\n    \"Office_Chair\": 231.21,\n    \"Blender\": 76.06\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.55. The customer is evaluating Running_Shoes, Cotton_Tee, Protein_Powder, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 66.82}, {\"name\": \"Cotton_Tee\", \"cost\": 17.61}, {\"name\": \"Protein_Powder\", \"cost\": 31.36}, {\"name\": \"Leather_Boots\", \"cost\": 76.55}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.55}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 83.52,\n    \"Cotton_Tee\": 22.01,\n    \"Protein_Powder\": 39.2,\n    \"Leather_Boots\": 95.69\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.66. The customer is evaluating Coffee_Beans_1kg, Leather_Boots, Standard_Earbuds, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 8.5}, {\"name\": \"Leather_Boots\", \"cost\": 128.77}, {\"name\": \"Standard_Earbuds\", \"cost\": 39.9}, {\"name\": \"Office_Chair\", \"cost\": 91.97}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.66}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 10.62,\n    \"Leather_Boots\": 160.96,\n    \"Standard_Earbuds\": 49.88,\n    \"Office_Chair\": 114.96\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.43. The customer is evaluating Designer_Handbag, Cotton_Tee, Mechanical_Keyboard, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 363.57}, {\"name\": \"Cotton_Tee\", \"cost\": 10.69}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 69.03}, {\"name\": \"Protein_Powder\", \"cost\": 41.51}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.43}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 454.46,\n    \"Cotton_Tee\": 13.36,\n    \"Mechanical_Keyboard\": 86.29,\n    \"Protein_Powder\": 51.89\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.65. The customer is evaluating Cotton_Tee, Standard_Earbuds, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 20.98}, {\"name\": \"Standard_Earbuds\", \"cost\": 34.76}, {\"name\": \"Gaming_Mouse\", \"cost\": 51.13}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.65}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 26.23,\n    \"Standard_Earbuds\": 43.45,\n    \"Gaming_Mouse\": 63.91\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.66. The customer is evaluating Premium_Watch, Cotton_Tee, Protein_Powder, Coffee_Beans_1kg, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 216.21}, {\"name\": \"Cotton_Tee\", \"cost\": 12.11}, {\"name\": \"Protein_Powder\", \"cost\": 54.12}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 12.36}, {\"name\": \"Air_Fryer\", \"cost\": 77.82}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.66}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 270.26,\n    \"Cotton_Tee\": 15.14,\n    \"Protein_Powder\": 67.65,\n    \"Coffee_Beans_1kg\": 15.45,\n    \"Air_Fryer\": 97.27\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.84. The customer is evaluating Gaming_Mouse, Cotton_Tee, Premium_Watch, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 37.02}, {\"name\": \"Cotton_Tee\", \"cost\": 8.57}, {\"name\": \"Premium_Watch\", \"cost\": 161.16}, {\"name\": \"Running_Shoes\", \"cost\": 53.2}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.84}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 46.28,\n    \"Cotton_Tee\": 10.71,\n    \"Premium_Watch\": 201.45,\n    \"Running_Shoes\": 66.5\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.65. The customer is evaluating Protein_Powder, Mechanical_Keyboard, Office_Chair, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 40.43}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 89.97}, {\"name\": \"Office_Chair\", \"cost\": 101.19}, {\"name\": \"Designer_Handbag\", \"cost\": 249.51}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.65}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 50.54,\n    \"Mechanical_Keyboard\": 112.46,\n    \"Office_Chair\": 126.49,\n    \"Designer_Handbag\": 311.89\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.43. The customer is evaluating Smart_Speaker, Office_Chair, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 86.34}, {\"name\": \"Office_Chair\", \"cost\": 50.12}, {\"name\": \"Standard_Earbuds\", \"cost\": 51.38}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.43}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 107.93,\n    \"Office_Chair\": 62.65,\n    \"Standard_Earbuds\": 64.23\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.62. The customer is evaluating Smart_Speaker, Leather_Boots, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 55.77}, {\"name\": \"Leather_Boots\", \"cost\": 113.72}, {\"name\": \"Premium_Watch\", \"cost\": 180.31}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.62}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 69.71,\n    \"Leather_Boots\": 142.15,\n    \"Premium_Watch\": 225.39\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.35. The customer is evaluating Premium_Watch, Coffee_Beans_1kg, Standard_Earbuds, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 143.28}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 19.28}, {\"name\": \"Standard_Earbuds\", \"cost\": 41.61}, {\"name\": \"Running_Shoes\", \"cost\": 79.87}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.35}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 179.1,\n    \"Coffee_Beans_1kg\": 24.1,\n    \"Standard_Earbuds\": 52.01,\n    \"Running_Shoes\": 99.84\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.98. The customer is evaluating Blender, Designer_Handbag, Leather_Boots, Cotton_Tee, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 30.75}, {\"name\": \"Designer_Handbag\", \"cost\": 207.29}, {\"name\": \"Leather_Boots\", \"cost\": 85.14}, {\"name\": \"Cotton_Tee\", \"cost\": 15.28}, {\"name\": \"Gaming_Mouse\", \"cost\": 25.36}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.98}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 38.44,\n    \"Designer_Handbag\": 259.11,\n    \"Leather_Boots\": 106.42,\n    \"Cotton_Tee\": 19.1,\n    \"Gaming_Mouse\": 31.7\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.31. The customer is evaluating Coffee_Beans_1kg, Mechanical_Keyboard, Leather_Boots, Premium_Watch, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 24.72}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 73.44}, {\"name\": \"Leather_Boots\", \"cost\": 91.19}, {\"name\": \"Premium_Watch\", \"cost\": 209.46}, {\"name\": \"Budget_Cable\", \"cost\": 9.78}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.31}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 30.9,\n    \"Mechanical_Keyboard\": 91.8,\n    \"Leather_Boots\": 113.99,\n    \"Premium_Watch\": 261.82,\n    \"Budget_Cable\": 12.22\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.92. The customer is evaluating Protein_Powder, Leather_Boots, Standard_Earbuds, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 25.72}, {\"name\": \"Leather_Boots\", \"cost\": 90.44}, {\"name\": \"Standard_Earbuds\", \"cost\": 32.45}, {\"name\": \"Smart_Speaker\", \"cost\": 29.83}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.92}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 32.15,\n    \"Leather_Boots\": 113.05,\n    \"Standard_Earbuds\": 40.56,\n    \"Smart_Speaker\": 37.29\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.63. The customer is evaluating Blender, Air_Fryer, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 40.01}, {\"name\": \"Air_Fryer\", \"cost\": 135.29}, {\"name\": \"Budget_Cable\", \"cost\": 4.05}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.63}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 50.01,\n    \"Air_Fryer\": 169.11,\n    \"Budget_Cable\": 5.06\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.74. The customer is evaluating Mechanical_Keyboard, Running_Shoes, Office_Chair, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 86.9}, {\"name\": \"Running_Shoes\", \"cost\": 49.65}, {\"name\": \"Office_Chair\", \"cost\": 118.12}, {\"name\": \"Standard_Earbuds\", \"cost\": 45.59}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.74}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 108.62,\n    \"Running_Shoes\": 62.06,\n    \"Office_Chair\": 147.65,\n    \"Standard_Earbuds\": 56.99\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.69. The customer is evaluating Mechanical_Keyboard, Budget_Cable, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 40.09}, {\"name\": \"Budget_Cable\", \"cost\": 7.44}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 20.24}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.69}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 50.11,\n    \"Budget_Cable\": 9.3,\n    \"Coffee_Beans_1kg\": 25.3\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.87. The customer is evaluating Budget_Cable, Blender, Designer_Handbag, Protein_Powder, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 11.46}, {\"name\": \"Blender\", \"cost\": 74.92}, {\"name\": \"Designer_Handbag\", \"cost\": 330.25}, {\"name\": \"Protein_Powder\", \"cost\": 18.92}, {\"name\": \"Gaming_Mouse\", \"cost\": 27.61}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.87}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 14.33,\n    \"Blender\": 93.65,\n    \"Designer_Handbag\": 412.81,\n    \"Protein_Powder\": 23.65,\n    \"Gaming_Mouse\": 34.51\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.22. The customer is evaluating Running_Shoes, Air_Fryer, Mechanical_Keyboard, Gaming_Mouse, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 77.49}, {\"name\": \"Air_Fryer\", \"cost\": 126.82}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 60.73}, {\"name\": \"Gaming_Mouse\", \"cost\": 22.63}, {\"name\": \"Standard_Earbuds\", \"cost\": 58.66}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.22}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 96.86,\n    \"Air_Fryer\": 158.52,\n    \"Mechanical_Keyboard\": 75.91,\n    \"Gaming_Mouse\": 28.29,\n    \"Standard_Earbuds\": 73.32\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.97. The customer is evaluating Protein_Powder, Designer_Handbag, Office_Chair, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 40.11}, {\"name\": \"Designer_Handbag\", \"cost\": 246.68}, {\"name\": \"Office_Chair\", \"cost\": 65.99}, {\"name\": \"Gaming_Mouse\", \"cost\": 38.44}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.97}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 50.14,\n    \"Designer_Handbag\": 308.35,\n    \"Office_Chair\": 82.49,\n    \"Gaming_Mouse\": 48.05\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.13. The customer is evaluating Gaming_Mouse, Blender, Protein_Powder, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 45.1}, {\"name\": \"Blender\", \"cost\": 82.46}, {\"name\": \"Protein_Powder\", \"cost\": 17.81}, {\"name\": \"Running_Shoes\", \"cost\": 92.72}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.13}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 56.38,\n    \"Blender\": 103.07,\n    \"Protein_Powder\": 22.26,\n    \"Running_Shoes\": 115.9\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.42. The customer is evaluating Running_Shoes, Cotton_Tee, Office_Chair, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 90.8}, {\"name\": \"Cotton_Tee\", \"cost\": 7.1}, {\"name\": \"Office_Chair\", \"cost\": 105.25}, {\"name\": \"Premium_Watch\", \"cost\": 149.83}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.42}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 113.5,\n    \"Cotton_Tee\": 8.88,\n    \"Office_Chair\": 131.56,\n    \"Premium_Watch\": 187.29\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.52. The customer is evaluating Budget_Cable, Leather_Boots, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 5.68}, {\"name\": \"Leather_Boots\", \"cost\": 122.39}, {\"name\": \"Cotton_Tee\", \"cost\": 19.36}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.52}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 7.1,\n    \"Leather_Boots\": 152.99,\n    \"Cotton_Tee\": 24.2\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.38. The customer is evaluating Coffee_Beans_1kg, Mechanical_Keyboard, Designer_Handbag, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 19.32}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 80.96}, {\"name\": \"Designer_Handbag\", \"cost\": 258.04}, {\"name\": \"Leather_Boots\", \"cost\": 91.85}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.38}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 24.15,\n    \"Mechanical_Keyboard\": 101.2,\n    \"Designer_Handbag\": 322.55,\n    \"Leather_Boots\": 114.81\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.85. The customer is evaluating Standard_Earbuds, Cotton_Tee, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 23.86}, {\"name\": \"Cotton_Tee\", \"cost\": 6.0}, {\"name\": \"Smart_Speaker\", \"cost\": 57.25}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.85}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 29.82,\n    \"Cotton_Tee\": 7.5,\n    \"Smart_Speaker\": 71.56\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.78. The customer is evaluating Mechanical_Keyboard, Office_Chair, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 100.23}, {\"name\": \"Office_Chair\", \"cost\": 202.99}, {\"name\": \"Budget_Cable\", \"cost\": 6.93}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.78}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 125.29,\n    \"Office_Chair\": 253.74,\n    \"Budget_Cable\": 8.66\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.26. The customer is evaluating Smart_Speaker, Mechanical_Keyboard, Office_Chair, Standard_Earbuds, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 43.72}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 66.47}, {\"name\": \"Office_Chair\", \"cost\": 177.96}, {\"name\": \"Standard_Earbuds\", \"cost\": 29.53}, {\"name\": \"Leather_Boots\", \"cost\": 99.62}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.26}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 54.65,\n    \"Mechanical_Keyboard\": 83.09,\n    \"Office_Chair\": 222.45,\n    \"Standard_Earbuds\": 36.91,\n    \"Leather_Boots\": 124.53\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.52. The customer is evaluating Smart_Speaker, Office_Chair, Budget_Cable, Blender, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 75.3}, {\"name\": \"Office_Chair\", \"cost\": 129.79}, {\"name\": \"Budget_Cable\", \"cost\": 11.67}, {\"name\": \"Blender\", \"cost\": 75.28}, {\"name\": \"Leather_Boots\", \"cost\": 119.11}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.52}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 94.12,\n    \"Office_Chair\": 162.24,\n    \"Budget_Cable\": 14.59,\n    \"Blender\": 94.1,\n    \"Leather_Boots\": 148.89\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.33. The customer is evaluating Running_Shoes, Standard_Earbuds, Blender, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 85.31}, {\"name\": \"Standard_Earbuds\", \"cost\": 52.3}, {\"name\": \"Blender\", \"cost\": 21.45}, {\"name\": \"Office_Chair\", \"cost\": 184.01}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.33}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 106.64,\n    \"Standard_Earbuds\": 65.38,\n    \"Blender\": 26.81,\n    \"Office_Chair\": 230.01\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.75. The customer is evaluating Designer_Handbag, Smart_Speaker, Coffee_Beans_1kg, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 243.27}, {\"name\": \"Smart_Speaker\", \"cost\": 77.93}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 21.29}, {\"name\": \"Office_Chair\", \"cost\": 143.76}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.75}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 304.09,\n    \"Smart_Speaker\": 97.41,\n    \"Coffee_Beans_1kg\": 26.61,\n    \"Office_Chair\": 179.7\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.54. The customer is evaluating Cotton_Tee, Premium_Watch, Smart_Speaker, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 10.52}, {\"name\": \"Premium_Watch\", \"cost\": 151.87}, {\"name\": \"Smart_Speaker\", \"cost\": 42.73}, {\"name\": \"Blender\", \"cost\": 24.34}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.54}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 13.15,\n    \"Premium_Watch\": 189.84,\n    \"Smart_Speaker\": 53.41,\n    \"Blender\": 30.43\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.56. The customer is evaluating Standard_Earbuds, Coffee_Beans_1kg, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 52.26}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 8.02}, {\"name\": \"Blender\", \"cost\": 57.02}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.56}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 65.33,\n    \"Coffee_Beans_1kg\": 10.02,\n    \"Blender\": 71.28\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.63. The customer is evaluating Standard_Earbuds, Budget_Cable, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 32.0}, {\"name\": \"Budget_Cable\", \"cost\": 2.49}, {\"name\": \"Cotton_Tee\", \"cost\": 18.22}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.63}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 40.0,\n    \"Budget_Cable\": 3.11,\n    \"Cotton_Tee\": 22.77\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.84. The customer is evaluating Mechanical_Keyboard, Premium_Watch, Leather_Boots, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 71.11}, {\"name\": \"Premium_Watch\", \"cost\": 189.66}, {\"name\": \"Leather_Boots\", \"cost\": 114.94}, {\"name\": \"Smart_Speaker\", \"cost\": 33.12}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.84}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 88.89,\n    \"Premium_Watch\": 237.07,\n    \"Leather_Boots\": 143.68,\n    \"Smart_Speaker\": 41.4\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.55. The customer is evaluating Protein_Powder, Premium_Watch, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 32.55}, {\"name\": \"Premium_Watch\", \"cost\": 218.73}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 104.76}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.55}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 40.69,\n    \"Premium_Watch\": 273.41,\n    \"Mechanical_Keyboard\": 130.95\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.83. The customer is evaluating Office_Chair, Cotton_Tee, Budget_Cable, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 99.38}, {\"name\": \"Cotton_Tee\", \"cost\": 10.53}, {\"name\": \"Budget_Cable\", \"cost\": 7.97}, {\"name\": \"Standard_Earbuds\", \"cost\": 33.84}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.83}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 124.22,\n    \"Cotton_Tee\": 13.16,\n    \"Budget_Cable\": 9.96,\n    \"Standard_Earbuds\": 42.3\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.44. The customer is evaluating Premium_Watch, Standard_Earbuds, Mechanical_Keyboard, Gaming_Mouse, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 132.59}, {\"name\": \"Standard_Earbuds\", \"cost\": 54.66}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 55.09}, {\"name\": \"Gaming_Mouse\", \"cost\": 49.32}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 11.33}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.44}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 165.74,\n    \"Standard_Earbuds\": 68.32,\n    \"Mechanical_Keyboard\": 68.86,\n    \"Gaming_Mouse\": 61.65,\n    \"Coffee_Beans_1kg\": 14.16\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.97. The customer is evaluating Premium_Watch, Designer_Handbag, Office_Chair, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 197.64}, {\"name\": \"Designer_Handbag\", \"cost\": 355.6}, {\"name\": \"Office_Chair\", \"cost\": 192.69}, {\"name\": \"Standard_Earbuds\", \"cost\": 46.93}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.97}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 247.05,\n    \"Designer_Handbag\": 444.5,\n    \"Office_Chair\": 240.86,\n    \"Standard_Earbuds\": 58.66\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.76. The customer is evaluating Premium_Watch, Protein_Powder, Office_Chair, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 201.93}, {\"name\": \"Protein_Powder\", \"cost\": 54.93}, {\"name\": \"Office_Chair\", \"cost\": 75.12}, {\"name\": \"Designer_Handbag\", \"cost\": 231.6}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.76}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 252.41,\n    \"Protein_Powder\": 68.66,\n    \"Office_Chair\": 93.9,\n    \"Designer_Handbag\": 289.5\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.46. The customer is evaluating Cotton_Tee, Running_Shoes, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 7.17}, {\"name\": \"Running_Shoes\", \"cost\": 35.81}, {\"name\": \"Designer_Handbag\", \"cost\": 343.02}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.46}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 8.96,\n    \"Running_Shoes\": 44.76,\n    \"Designer_Handbag\": 428.77\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.84. The customer is evaluating Protein_Powder, Gaming_Mouse, Air_Fryer, Leather_Boots, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 44.48}, {\"name\": \"Gaming_Mouse\", \"cost\": 36.87}, {\"name\": \"Air_Fryer\", \"cost\": 106.68}, {\"name\": \"Leather_Boots\", \"cost\": 85.49}, {\"name\": \"Designer_Handbag\", \"cost\": 391.53}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.84}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 55.6,\n    \"Gaming_Mouse\": 46.09,\n    \"Air_Fryer\": 133.35,\n    \"Leather_Boots\": 106.86,\n    \"Designer_Handbag\": 489.41\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.93. The customer is evaluating Standard_Earbuds, Protein_Powder, Air_Fryer, Coffee_Beans_1kg, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 42.96}, {\"name\": \"Protein_Powder\", \"cost\": 27.17}, {\"name\": \"Air_Fryer\", \"cost\": 131.35}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 21.49}, {\"name\": \"Premium_Watch\", \"cost\": 163.54}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.93}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 53.7,\n    \"Protein_Powder\": 33.96,\n    \"Air_Fryer\": 164.19,\n    \"Coffee_Beans_1kg\": 26.86,\n    \"Premium_Watch\": 204.42\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.52. The customer is evaluating Air_Fryer, Premium_Watch, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 129.76}, {\"name\": \"Premium_Watch\", \"cost\": 128.47}, {\"name\": \"Designer_Handbag\", \"cost\": 188.45}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.52}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 162.2,\n    \"Premium_Watch\": 160.59,\n    \"Designer_Handbag\": 235.56\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.95. The customer is evaluating Premium_Watch, Blender, Office_Chair, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 146.48}, {\"name\": \"Blender\", \"cost\": 40.04}, {\"name\": \"Office_Chair\", \"cost\": 193.07}, {\"name\": \"Air_Fryer\", \"cost\": 75.43}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.95}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 183.1,\n    \"Blender\": 50.05,\n    \"Office_Chair\": 241.34,\n    \"Air_Fryer\": 94.29\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.89. The customer is evaluating Budget_Cable, Premium_Watch, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 9.44}, {\"name\": \"Premium_Watch\", \"cost\": 187.33}, {\"name\": \"Standard_Earbuds\", \"cost\": 20.76}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.89}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 11.8,\n    \"Premium_Watch\": 234.16,\n    \"Standard_Earbuds\": 25.95\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.87. The customer is evaluating Budget_Cable, Blender, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 10.43}, {\"name\": \"Blender\", \"cost\": 29.43}, {\"name\": \"Protein_Powder\", \"cost\": 29.96}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.87}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 13.04,\n    \"Blender\": 36.79,\n    \"Protein_Powder\": 37.45\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.15. The customer is evaluating Leather_Boots, Mechanical_Keyboard, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 79.56}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 37.17}, {\"name\": \"Budget_Cable\", \"cost\": 9.96}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.15}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 99.45,\n    \"Mechanical_Keyboard\": 46.46,\n    \"Budget_Cable\": 12.45\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.89. The customer is evaluating Mechanical_Keyboard, Gaming_Mouse, Air_Fryer, Coffee_Beans_1kg, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 71.0}, {\"name\": \"Gaming_Mouse\", \"cost\": 36.44}, {\"name\": \"Air_Fryer\", \"cost\": 57.78}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 18.58}, {\"name\": \"Premium_Watch\", \"cost\": 163.88}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.89}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 88.75,\n    \"Gaming_Mouse\": 45.55,\n    \"Air_Fryer\": 72.22,\n    \"Coffee_Beans_1kg\": 23.22,\n    \"Premium_Watch\": 204.85\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.22. The customer is evaluating Gaming_Mouse, Office_Chair, Designer_Handbag, Air_Fryer, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 37.39}, {\"name\": \"Office_Chair\", \"cost\": 156.63}, {\"name\": \"Designer_Handbag\", \"cost\": 276.54}, {\"name\": \"Air_Fryer\", \"cost\": 77.92}, {\"name\": \"Smart_Speaker\", \"cost\": 32.94}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.22}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 46.74,\n    \"Office_Chair\": 195.79,\n    \"Designer_Handbag\": 345.68,\n    \"Air_Fryer\": 97.4,\n    \"Smart_Speaker\": 41.17\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.42. The customer is evaluating Leather_Boots, Office_Chair, Coffee_Beans_1kg, Air_Fryer, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 115.74}, {\"name\": \"Office_Chair\", \"cost\": 100.37}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 10.49}, {\"name\": \"Air_Fryer\", \"cost\": 82.49}, {\"name\": \"Blender\", \"cost\": 54.59}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.42}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 144.67,\n    \"Office_Chair\": 125.46,\n    \"Coffee_Beans_1kg\": 13.11,\n    \"Air_Fryer\": 103.11,\n    \"Blender\": 68.24\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.71. The customer is evaluating Smart_Speaker, Blender, Protein_Powder, Budget_Cable, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 55.23}, {\"name\": \"Blender\", \"cost\": 79.87}, {\"name\": \"Protein_Powder\", \"cost\": 31.85}, {\"name\": \"Budget_Cable\", \"cost\": 6.07}, {\"name\": \"Gaming_Mouse\", \"cost\": 48.59}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.71}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 69.04,\n    \"Blender\": 99.84,\n    \"Protein_Powder\": 39.81,\n    \"Budget_Cable\": 7.59,\n    \"Gaming_Mouse\": 60.74\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.15. The customer is evaluating Protein_Powder, Leather_Boots, Running_Shoes, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 18.22}, {\"name\": \"Leather_Boots\", \"cost\": 71.32}, {\"name\": \"Running_Shoes\", \"cost\": 45.28}, {\"name\": \"Cotton_Tee\", \"cost\": 10.69}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.15}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 22.77,\n    \"Leather_Boots\": 89.15,\n    \"Running_Shoes\": 56.6,\n    \"Cotton_Tee\": 13.36\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.22. The customer is evaluating Office_Chair, Coffee_Beans_1kg, Designer_Handbag, Protein_Powder, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 127.24}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 22.88}, {\"name\": \"Designer_Handbag\", \"cost\": 366.46}, {\"name\": \"Protein_Powder\", \"cost\": 19.99}, {\"name\": \"Standard_Earbuds\", \"cost\": 58.47}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.22}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 159.05,\n    \"Coffee_Beans_1kg\": 28.6,\n    \"Designer_Handbag\": 458.07,\n    \"Protein_Powder\": 24.99,\n    \"Standard_Earbuds\": 73.09\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.15. The customer is evaluating Gaming_Mouse, Air_Fryer, Designer_Handbag, Cotton_Tee, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 45.15}, {\"name\": \"Air_Fryer\", \"cost\": 36.13}, {\"name\": \"Designer_Handbag\", \"cost\": 206.51}, {\"name\": \"Cotton_Tee\", \"cost\": 15.11}, {\"name\": \"Budget_Cable\", \"cost\": 9.79}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.15}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 56.44,\n    \"Air_Fryer\": 45.16,\n    \"Designer_Handbag\": 258.14,\n    \"Cotton_Tee\": 18.89,\n    \"Budget_Cable\": 12.24\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.86. The customer is evaluating Premium_Watch, Budget_Cable, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 166.29}, {\"name\": \"Budget_Cable\", \"cost\": 9.53}, {\"name\": \"Blender\", \"cost\": 57.26}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.86}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 207.86,\n    \"Budget_Cable\": 11.91,\n    \"Blender\": 71.58\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.18. The customer is evaluating Blender, Air_Fryer, Premium_Watch, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 58.64}, {\"name\": \"Air_Fryer\", \"cost\": 40.83}, {\"name\": \"Premium_Watch\", \"cost\": 210.16}, {\"name\": \"Gaming_Mouse\", \"cost\": 32.09}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.18}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 73.3,\n    \"Air_Fryer\": 51.04,\n    \"Premium_Watch\": 262.7,\n    \"Gaming_Mouse\": 40.11\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.15 and sentiment=0.9. The customer is evaluating Blender, Gaming_Mouse, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 63.66}, {\"name\": \"Gaming_Mouse\", \"cost\": 35.95}, {\"name\": \"Budget_Cable\", \"cost\": 8.24}]\nMarket Conditions: {\"inflation\": 0.15, \"sentiment\": 0.9}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 79.57,\n    \"Gaming_Mouse\": 44.94,\n    \"Budget_Cable\": 10.3\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.8. The customer is evaluating Cotton_Tee, Protein_Powder, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 6.72}, {\"name\": \"Protein_Powder\", \"cost\": 46.97}, {\"name\": \"Smart_Speaker\", \"cost\": 73.8}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.8}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 8.4,\n    \"Protein_Powder\": 58.71,\n    \"Smart_Speaker\": 92.25\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.31. The customer is evaluating Smart_Speaker, Blender, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 55.37}, {\"name\": \"Blender\", \"cost\": 44.17}, {\"name\": \"Budget_Cable\", \"cost\": 3.25}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.31}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 69.21,\n    \"Blender\": 55.21,\n    \"Budget_Cable\": 4.06\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.98. The customer is evaluating Air_Fryer, Premium_Watch, Designer_Handbag, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 128.43}, {\"name\": \"Premium_Watch\", \"cost\": 206.14}, {\"name\": \"Designer_Handbag\", \"cost\": 304.86}, {\"name\": \"Gaming_Mouse\", \"cost\": 47.32}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.98}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 160.54,\n    \"Premium_Watch\": 257.67,\n    \"Designer_Handbag\": 381.08,\n    \"Gaming_Mouse\": 59.15\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.72. The customer is evaluating Mechanical_Keyboard, Designer_Handbag, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 119.96}, {\"name\": \"Designer_Handbag\", \"cost\": 354.53}, {\"name\": \"Premium_Watch\", \"cost\": 219.38}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.72}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 149.95,\n    \"Designer_Handbag\": 443.16,\n    \"Premium_Watch\": 274.23\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.27. The customer is evaluating Cotton_Tee, Running_Shoes, Mechanical_Keyboard, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 13.88}, {\"name\": \"Running_Shoes\", \"cost\": 63.0}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 88.73}, {\"name\": \"Leather_Boots\", \"cost\": 66.78}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.27}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 17.35,\n    \"Running_Shoes\": 78.75,\n    \"Mechanical_Keyboard\": 110.91,\n    \"Leather_Boots\": 83.47\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.14. The customer is evaluating Protein_Powder, Budget_Cable, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 36.52}, {\"name\": \"Budget_Cable\", \"cost\": 10.84}, {\"name\": \"Cotton_Tee\", \"cost\": 12.93}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.14}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 45.65,\n    \"Budget_Cable\": 13.55,\n    \"Cotton_Tee\": 16.16\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.47. The customer is evaluating Budget_Cable, Premium_Watch, Air_Fryer, Office_Chair, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 4.25}, {\"name\": \"Premium_Watch\", \"cost\": 180.72}, {\"name\": \"Air_Fryer\", \"cost\": 94.2}, {\"name\": \"Office_Chair\", \"cost\": 55.66}, {\"name\": \"Blender\", \"cost\": 38.69}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.47}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 5.31,\n    \"Premium_Watch\": 225.9,\n    \"Air_Fryer\": 117.75,\n    \"Office_Chair\": 69.57,\n    \"Blender\": 48.36\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.29. The customer is evaluating Gaming_Mouse, Mechanical_Keyboard, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 27.89}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 77.87}, {\"name\": \"Designer_Handbag\", \"cost\": 214.07}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.29}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 34.86,\n    \"Mechanical_Keyboard\": 97.34,\n    \"Designer_Handbag\": 267.59\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.3. The customer is evaluating Cotton_Tee, Standard_Earbuds, Mechanical_Keyboard, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 19.79}, {\"name\": \"Standard_Earbuds\", \"cost\": 26.0}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 50.3}, {\"name\": \"Premium_Watch\", \"cost\": 174.43}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.3}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 24.74,\n    \"Standard_Earbuds\": 32.5,\n    \"Mechanical_Keyboard\": 62.88,\n    \"Premium_Watch\": 218.04\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.32. The customer is evaluating Leather_Boots, Air_Fryer, Budget_Cable, Standard_Earbuds, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 110.68}, {\"name\": \"Air_Fryer\", \"cost\": 35.92}, {\"name\": \"Budget_Cable\", \"cost\": 4.42}, {\"name\": \"Standard_Earbuds\", \"cost\": 25.22}, {\"name\": \"Gaming_Mouse\", \"cost\": 31.22}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.32}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 138.35,\n    \"Air_Fryer\": 44.9,\n    \"Budget_Cable\": 5.53,\n    \"Standard_Earbuds\": 31.52,\n    \"Gaming_Mouse\": 39.02\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.81. The customer is evaluating Blender, Designer_Handbag, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 61.77}, {\"name\": \"Designer_Handbag\", \"cost\": 387.94}, {\"name\": \"Leather_Boots\", \"cost\": 89.19}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.81}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 77.21,\n    \"Designer_Handbag\": 484.93,\n    \"Leather_Boots\": 111.49\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.15 and sentiment=0.56. The customer is evaluating Protein_Powder, Gaming_Mouse, Office_Chair, Designer_Handbag, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 38.43}, {\"name\": \"Gaming_Mouse\", \"cost\": 33.55}, {\"name\": \"Office_Chair\", \"cost\": 185.19}, {\"name\": \"Designer_Handbag\", \"cost\": 278.88}, {\"name\": \"Running_Shoes\", \"cost\": 47.55}]\nMarket Conditions: {\"inflation\": 0.15, \"sentiment\": 0.56}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 48.04,\n    \"Gaming_Mouse\": 41.94,\n    \"Office_Chair\": 231.49,\n    \"Designer_Handbag\": 348.6,\n    \"Running_Shoes\": 59.44\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.22. The customer is evaluating Office_Chair, Gaming_Mouse, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 189.68}, {\"name\": \"Gaming_Mouse\", \"cost\": 54.15}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 44.12}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.22}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 237.1,\n    \"Gaming_Mouse\": 67.69,\n    \"Mechanical_Keyboard\": 55.15\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.36. The customer is evaluating Protein_Powder, Office_Chair, Standard_Earbuds, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 45.83}, {\"name\": \"Office_Chair\", \"cost\": 126.68}, {\"name\": \"Standard_Earbuds\", \"cost\": 58.08}, {\"name\": \"Designer_Handbag\", \"cost\": 309.18}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.36}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 57.29,\n    \"Office_Chair\": 158.35,\n    \"Standard_Earbuds\": 72.6,\n    \"Designer_Handbag\": 386.48\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.72. The customer is evaluating Cotton_Tee, Leather_Boots, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 10.31}, {\"name\": \"Leather_Boots\", \"cost\": 74.64}, {\"name\": \"Blender\", \"cost\": 24.15}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.72}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 12.89,\n    \"Leather_Boots\": 93.3,\n    \"Blender\": 30.19\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.34. The customer is evaluating Running_Shoes, Mechanical_Keyboard, Blender, Gaming_Mouse, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 28.19}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 49.37}, {\"name\": \"Blender\", \"cost\": 65.87}, {\"name\": \"Gaming_Mouse\", \"cost\": 25.63}, {\"name\": \"Cotton_Tee\", \"cost\": 20.37}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.34}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 35.24,\n    \"Mechanical_Keyboard\": 61.71,\n    \"Blender\": 82.34,\n    \"Gaming_Mouse\": 32.04,\n    \"Cotton_Tee\": 25.46\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.65. The customer is evaluating Leather_Boots, Office_Chair, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 118.37}, {\"name\": \"Office_Chair\", \"cost\": 139.29}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 22.48}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.65}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 147.96,\n    \"Office_Chair\": 174.11,\n    \"Coffee_Beans_1kg\": 28.1\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.38. The customer is evaluating Gaming_Mouse, Running_Shoes, Protein_Powder, Standard_Earbuds, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 27.03}, {\"name\": \"Running_Shoes\", \"cost\": 83.71}, {\"name\": \"Protein_Powder\", \"cost\": 18.47}, {\"name\": \"Standard_Earbuds\", \"cost\": 58.44}, {\"name\": \"Office_Chair\", \"cost\": 183.39}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.38}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 33.79,\n    \"Running_Shoes\": 104.64,\n    \"Protein_Powder\": 23.09,\n    \"Standard_Earbuds\": 73.05,\n    \"Office_Chair\": 229.24\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.69. The customer is evaluating Standard_Earbuds, Designer_Handbag, Leather_Boots, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 27.22}, {\"name\": \"Designer_Handbag\", \"cost\": 182.96}, {\"name\": \"Leather_Boots\", \"cost\": 67.95}, {\"name\": \"Premium_Watch\", \"cost\": 178.78}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.69}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 34.02,\n    \"Designer_Handbag\": 228.7,\n    \"Leather_Boots\": 84.94,\n    \"Premium_Watch\": 223.47\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.72. The customer is evaluating Mechanical_Keyboard, Air_Fryer, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 99.61}, {\"name\": \"Air_Fryer\", \"cost\": 108.06}, {\"name\": \"Office_Chair\", \"cost\": 144.76}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.72}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 124.51,\n    \"Air_Fryer\": 135.07,\n    \"Office_Chair\": 180.95\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.73. The customer is evaluating Smart_Speaker, Standard_Earbuds, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Smart_Speaker\", \"cost\": 35.21}, {\"name\": \"Standard_Earbuds\", \"cost\": 52.68}, {\"name\": \"Premium_Watch\", \"cost\": 219.95}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.73}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Smart_Speaker\": 44.01,\n    \"Standard_Earbuds\": 65.85,\n    \"Premium_Watch\": 274.94\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.76. The customer is evaluating Standard_Earbuds, Leather_Boots, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 55.42}, {\"name\": \"Leather_Boots\", \"cost\": 115.51}, {\"name\": \"Air_Fryer\", \"cost\": 69.67}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.76}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 69.28,\n    \"Leather_Boots\": 144.39,\n    \"Air_Fryer\": 87.09\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.65. The customer is evaluating Standard_Earbuds, Running_Shoes, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 57.94}, {\"name\": \"Running_Shoes\", \"cost\": 36.37}, {\"name\": \"Leather_Boots\", \"cost\": 46.26}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.65}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 72.42,\n    \"Running_Shoes\": 45.46,\n    \"Leather_Boots\": 57.82\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.2. The customer is evaluating Office_Chair, Budget_Cable, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 99.24}, {\"name\": \"Budget_Cable\", \"cost\": 7.98}, {\"name\": \"Gaming_Mouse\", \"cost\": 34.32}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.2}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 124.05,\n    \"Budget_Cable\": 9.98,\n    \"Gaming_Mouse\": 42.9\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.54. The customer is evaluating Protein_Powder, Cotton_Tee, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 53.98}, {\"name\": \"Cotton_Tee\", \"cost\": 6.3}, {\"name\": \"Air_Fryer\", \"cost\": 52.99}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.54}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 67.47,\n    \"Cotton_Tee\": 7.88,\n    \"Air_Fryer\": 66.24\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.24. The customer is evaluating Cotton_Tee, Leather_Boots, Blender, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 6.43}, {\"name\": \"Leather_Boots\", \"cost\": 97.13}, {\"name\": \"Blender\", \"cost\": 82.5}, {\"name\": \"Running_Shoes\", \"cost\": 80.31}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.24}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 8.04,\n    \"Leather_Boots\": 121.41,\n    \"Blender\": 103.12,\n    \"Running_Shoes\": 100.39\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.47. The customer is evaluating Blender, Coffee_Beans_1kg, Office_Chair, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 42.7}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 15.82}, {\"name\": \"Office_Chair\", \"cost\": 83.63}, {\"name\": \"Designer_Handbag\", \"cost\": 306.89}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.47}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 53.38,\n    \"Coffee_Beans_1kg\": 19.77,\n    \"Office_Chair\": 104.54,\n    \"Designer_Handbag\": 383.61\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.8. The customer is evaluating Cotton_Tee, Gaming_Mouse, Office_Chair, Leather_Boots, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 7.46}, {\"name\": \"Gaming_Mouse\", \"cost\": 38.44}, {\"name\": \"Office_Chair\", \"cost\": 104.62}, {\"name\": \"Leather_Boots\", \"cost\": 128.25}, {\"name\": \"Designer_Handbag\", \"cost\": 383.15}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.8}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 9.32,\n    \"Gaming_Mouse\": 48.05,\n    \"Office_Chair\": 130.78,\n    \"Leather_Boots\": 160.31,\n    \"Designer_Handbag\": 478.94\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.42. The customer is evaluating Mechanical_Keyboard, Protein_Powder, Office_Chair, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 98.83}, {\"name\": \"Protein_Powder\", \"cost\": 31.79}, {\"name\": \"Office_Chair\", \"cost\": 155.82}, {\"name\": \"Air_Fryer\", \"cost\": 103.52}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.42}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 123.54,\n    \"Protein_Powder\": 39.74,\n    \"Office_Chair\": 194.77,\n    \"Air_Fryer\": 129.4\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.95. The customer is evaluating Coffee_Beans_1kg, Premium_Watch, Smart_Speaker, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 11.17}, {\"name\": \"Premium_Watch\", \"cost\": 135.47}, {\"name\": \"Smart_Speaker\", \"cost\": 75.17}, {\"name\": \"Budget_Cable\", \"cost\": 5.93}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.95}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 13.96,\n    \"Premium_Watch\": 169.34,\n    \"Smart_Speaker\": 93.96,\n    \"Budget_Cable\": 7.41\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.56. The customer is evaluating Protein_Powder, Cotton_Tee, Gaming_Mouse and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 51.45}, {\"name\": \"Cotton_Tee\", \"cost\": 17.08}, {\"name\": \"Gaming_Mouse\", \"cost\": 48.07}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.56}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 64.31,\n    \"Cotton_Tee\": 21.35,\n    \"Gaming_Mouse\": 60.09\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.63. The customer is evaluating Standard_Earbuds, Cotton_Tee, Office_Chair, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Standard_Earbuds\", \"cost\": 28.82}, {\"name\": \"Cotton_Tee\", \"cost\": 19.16}, {\"name\": \"Office_Chair\", \"cost\": 147.14}, {\"name\": \"Leather_Boots\", \"cost\": 87.44}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.63}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Standard_Earbuds\": 36.02,\n    \"Cotton_Tee\": 23.95,\n    \"Office_Chair\": 183.92,\n    \"Leather_Boots\": 109.3\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.73. The customer is evaluating Blender, Leather_Boots, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 60.95}, {\"name\": \"Leather_Boots\", \"cost\": 105.94}, {\"name\": \"Standard_Earbuds\", \"cost\": 48.5}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.73}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 76.19,\n    \"Leather_Boots\": 132.43,\n    \"Standard_Earbuds\": 60.62\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.95. The customer is evaluating Budget_Cable, Cotton_Tee, Designer_Handbag, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 10.33}, {\"name\": \"Cotton_Tee\", \"cost\": 20.63}, {\"name\": \"Designer_Handbag\", \"cost\": 410.74}, {\"name\": \"Office_Chair\", \"cost\": 155.39}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.95}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 12.91,\n    \"Cotton_Tee\": 25.79,\n    \"Designer_Handbag\": 513.42,\n    \"Office_Chair\": 194.24\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.02 and sentiment=0.38. The customer is evaluating Running_Shoes, Budget_Cable, Gaming_Mouse, Smart_Speaker, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 81.34}, {\"name\": \"Budget_Cable\", \"cost\": 10.64}, {\"name\": \"Gaming_Mouse\", \"cost\": 45.99}, {\"name\": \"Smart_Speaker\", \"cost\": 81.08}, {\"name\": \"Air_Fryer\", \"cost\": 84.88}]\nMarket Conditions: {\"inflation\": 0.02, \"sentiment\": 0.38}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 101.68,\n    \"Budget_Cable\": 13.3,\n    \"Gaming_Mouse\": 57.49,\n    \"Smart_Speaker\": 101.35,\n    \"Air_Fryer\": 106.1\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.08 and sentiment=0.73. The customer is evaluating Gaming_Mouse, Mechanical_Keyboard, Blender, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 28.48}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 45.21}, {\"name\": \"Blender\", \"cost\": 64.78}, {\"name\": \"Standard_Earbuds\", \"cost\": 20.02}]\nMarket Conditions: {\"inflation\": 0.08, \"sentiment\": 0.73}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 35.6,\n    \"Mechanical_Keyboard\": 56.51,\n    \"Blender\": 80.97,\n    \"Standard_Earbuds\": 25.02\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.13 and sentiment=0.45. The customer is evaluating Protein_Powder, Cotton_Tee, Smart_Speaker, Standard_Earbuds and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 32.09}, {\"name\": \"Cotton_Tee\", \"cost\": 8.5}, {\"name\": \"Smart_Speaker\", \"cost\": 74.35}, {\"name\": \"Standard_Earbuds\", \"cost\": 24.22}]\nMarket Conditions: {\"inflation\": 0.13, \"sentiment\": 0.45}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 40.11,\n    \"Cotton_Tee\": 10.62,\n    \"Smart_Speaker\": 92.94,\n    \"Standard_Earbuds\": 30.27\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.01 and sentiment=0.47. The customer is evaluating Cotton_Tee, Air_Fryer, Leather_Boots, Blender, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 14.29}, {\"name\": \"Air_Fryer\", \"cost\": 138.24}, {\"name\": \"Leather_Boots\", \"cost\": 101.74}, {\"name\": \"Blender\", \"cost\": 58.03}, {\"name\": \"Protein_Powder\", \"cost\": 45.55}]\nMarket Conditions: {\"inflation\": 0.01, \"sentiment\": 0.47}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 17.86,\n    \"Air_Fryer\": 172.8,\n    \"Leather_Boots\": 127.17,\n    \"Blender\": 72.54,\n    \"Protein_Powder\": 56.94\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.03 and sentiment=0.7. The customer is evaluating Air_Fryer, Office_Chair, Coffee_Beans_1kg, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 81.17}, {\"name\": \"Office_Chair\", \"cost\": 100.17}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 25.37}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 39.71}]\nMarket Conditions: {\"inflation\": 0.03, \"sentiment\": 0.7}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 101.46,\n    \"Office_Chair\": 125.21,\n    \"Coffee_Beans_1kg\": 31.71,\n    \"Mechanical_Keyboard\": 49.64\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.85. The customer is evaluating Blender, Standard_Earbuds, Smart_Speaker, Leather_Boots, Coffee_Beans_1kg and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 51.35}, {\"name\": \"Standard_Earbuds\", \"cost\": 44.05}, {\"name\": \"Smart_Speaker\", \"cost\": 39.48}, {\"name\": \"Leather_Boots\", \"cost\": 90.08}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 21.71}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.85}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 64.19,\n    \"Standard_Earbuds\": 55.06,\n    \"Smart_Speaker\": 49.35,\n    \"Leather_Boots\": 112.6,\n    \"Coffee_Beans_1kg\": 27.14\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.92. The customer is evaluating Protein_Powder, Air_Fryer, Coffee_Beans_1kg, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Protein_Powder\", \"cost\": 49.9}, {\"name\": \"Air_Fryer\", \"cost\": 114.76}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 22.13}, {\"name\": \"Designer_Handbag\", \"cost\": 304.51}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.92}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Protein_Powder\": 62.38,\n    \"Air_Fryer\": 143.45,\n    \"Coffee_Beans_1kg\": 27.66,\n    \"Designer_Handbag\": 380.64\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.15 and sentiment=0.76. The customer is evaluating Air_Fryer, Standard_Earbuds, Designer_Handbag, Coffee_Beans_1kg, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 111.86}, {\"name\": \"Standard_Earbuds\", \"cost\": 21.73}, {\"name\": \"Designer_Handbag\", \"cost\": 229.75}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 14.53}, {\"name\": \"Running_Shoes\", \"cost\": 34.89}]\nMarket Conditions: {\"inflation\": 0.15, \"sentiment\": 0.76}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 139.82,\n    \"Standard_Earbuds\": 27.16,\n    \"Designer_Handbag\": 287.19,\n    \"Coffee_Beans_1kg\": 18.16,\n    \"Running_Shoes\": 43.61\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.14 and sentiment=0.92. The customer is evaluating Office_Chair, Protein_Powder, Coffee_Beans_1kg, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 193.04}, {\"name\": \"Protein_Powder\", \"cost\": 31.58}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 14.88}, {\"name\": \"Designer_Handbag\", \"cost\": 398.77}]\nMarket Conditions: {\"inflation\": 0.14, \"sentiment\": 0.92}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 241.3,\n    \"Protein_Powder\": 39.47,\n    \"Coffee_Beans_1kg\": 18.6,\n    \"Designer_Handbag\": 498.46\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.77. The customer is evaluating Blender, Air_Fryer, Cotton_Tee, Protein_Powder, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 48.11}, {\"name\": \"Air_Fryer\", \"cost\": 132.11}, {\"name\": \"Cotton_Tee\", \"cost\": 7.84}, {\"name\": \"Protein_Powder\", \"cost\": 18.43}, {\"name\": \"Designer_Handbag\", \"cost\": 284.47}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.77}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 60.14,\n    \"Air_Fryer\": 165.14,\n    \"Cotton_Tee\": 9.8,\n    \"Protein_Powder\": 23.04,\n    \"Designer_Handbag\": 355.59\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.48. The customer is evaluating Air_Fryer, Leather_Boots, Mechanical_Keyboard, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 74.18}, {\"name\": \"Leather_Boots\", \"cost\": 47.73}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 109.89}, {\"name\": \"Premium_Watch\", \"cost\": 154.72}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.48}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 92.73,\n    \"Leather_Boots\": 59.66,\n    \"Mechanical_Keyboard\": 137.36,\n    \"Premium_Watch\": 193.4\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.67. The customer is evaluating Blender, Leather_Boots, Designer_Handbag, Mechanical_Keyboard and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Blender\", \"cost\": 80.09}, {\"name\": \"Leather_Boots\", \"cost\": 118.82}, {\"name\": \"Designer_Handbag\", \"cost\": 259.83}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 92.14}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.67}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Blender\": 100.11,\n    \"Leather_Boots\": 148.52,\n    \"Designer_Handbag\": 324.79,\n    \"Mechanical_Keyboard\": 115.17\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.15 and sentiment=0.56. The customer is evaluating Coffee_Beans_1kg, Office_Chair, Standard_Earbuds, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 14.28}, {\"name\": \"Office_Chair\", \"cost\": 173.54}, {\"name\": \"Standard_Earbuds\", \"cost\": 57.7}, {\"name\": \"Smart_Speaker\", \"cost\": 65.23}]\nMarket Conditions: {\"inflation\": 0.15, \"sentiment\": 0.56}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 17.85,\n    \"Office_Chair\": 216.92,\n    \"Standard_Earbuds\": 72.12,\n    \"Smart_Speaker\": 81.54\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.88. The customer is evaluating Coffee_Beans_1kg, Premium_Watch, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 12.8}, {\"name\": \"Premium_Watch\", \"cost\": 132.45}, {\"name\": \"Office_Chair\", \"cost\": 105.58}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.88}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 16.0,\n    \"Premium_Watch\": 165.56,\n    \"Office_Chair\": 131.97\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.76. The customer is evaluating Mechanical_Keyboard, Running_Shoes, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Mechanical_Keyboard\", \"cost\": 42.57}, {\"name\": \"Running_Shoes\", \"cost\": 68.69}, {\"name\": \"Air_Fryer\", \"cost\": 83.19}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.76}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Mechanical_Keyboard\": 53.21,\n    \"Running_Shoes\": 85.86,\n    \"Air_Fryer\": 103.99\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.13. The customer is evaluating Cotton_Tee, Designer_Handbag, Budget_Cable, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Cotton_Tee\", \"cost\": 17.96}, {\"name\": \"Designer_Handbag\", \"cost\": 307.51}, {\"name\": \"Budget_Cable\", \"cost\": 3.2}, {\"name\": \"Protein_Powder\", \"cost\": 51.67}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.13}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Cotton_Tee\": 22.45,\n    \"Designer_Handbag\": 384.39,\n    \"Budget_Cable\": 4.0,\n    \"Protein_Powder\": 64.59\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.54. The customer is evaluating Coffee_Beans_1kg, Leather_Boots, Standard_Earbuds, Gaming_Mouse, Air_Fryer and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 19.35}, {\"name\": \"Leather_Boots\", \"cost\": 88.87}, {\"name\": \"Standard_Earbuds\", \"cost\": 42.08}, {\"name\": \"Gaming_Mouse\", \"cost\": 51.69}, {\"name\": \"Air_Fryer\", \"cost\": 81.85}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.54}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 24.19,\n    \"Leather_Boots\": 111.09,\n    \"Standard_Earbuds\": 52.6,\n    \"Gaming_Mouse\": 64.61,\n    \"Air_Fryer\": 102.31\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.1 and sentiment=0.71. The customer is evaluating Running_Shoes, Budget_Cable, Standard_Earbuds, Blender, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 30.69}, {\"name\": \"Budget_Cable\", \"cost\": 5.1}, {\"name\": \"Standard_Earbuds\", \"cost\": 29.09}, {\"name\": \"Blender\", \"cost\": 67.02}, {\"name\": \"Designer_Handbag\", \"cost\": 198.47}]\nMarket Conditions: {\"inflation\": 0.1, \"sentiment\": 0.71}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 38.36,\n    \"Budget_Cable\": 6.38,\n    \"Standard_Earbuds\": 36.36,\n    \"Blender\": 83.77,\n    \"Designer_Handbag\": 248.09\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.12 and sentiment=0.45. The customer is evaluating Air_Fryer, Leather_Boots, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 123.53}, {\"name\": \"Leather_Boots\", \"cost\": 119.99}, {\"name\": \"Premium_Watch\", \"cost\": 158.78}]\nMarket Conditions: {\"inflation\": 0.12, \"sentiment\": 0.45}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 154.41,\n    \"Leather_Boots\": 149.99,\n    \"Premium_Watch\": 198.47\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.88. The customer is evaluating Leather_Boots, Gaming_Mouse, Budget_Cable, Blender and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 57.77}, {\"name\": \"Gaming_Mouse\", \"cost\": 49.27}, {\"name\": \"Budget_Cable\", \"cost\": 4.2}, {\"name\": \"Blender\", \"cost\": 30.85}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.88}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 72.21,\n    \"Gaming_Mouse\": 61.59,\n    \"Budget_Cable\": 5.25,\n    \"Blender\": 38.56\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.61. The customer is evaluating Gaming_Mouse, Designer_Handbag, Standard_Earbuds, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Gaming_Mouse\", \"cost\": 40.81}, {\"name\": \"Designer_Handbag\", \"cost\": 408.41}, {\"name\": \"Standard_Earbuds\", \"cost\": 25.87}, {\"name\": \"Cotton_Tee\", \"cost\": 11.53}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.61}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Gaming_Mouse\": 51.01,\n    \"Designer_Handbag\": 510.51,\n    \"Standard_Earbuds\": 32.34,\n    \"Cotton_Tee\": 14.41\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.23. The customer is evaluating Office_Chair, Leather_Boots, Standard_Earbuds, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 82.0}, {\"name\": \"Leather_Boots\", \"cost\": 69.23}, {\"name\": \"Standard_Earbuds\", \"cost\": 37.52}, {\"name\": \"Protein_Powder\", \"cost\": 32.23}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.23}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 102.5,\n    \"Leather_Boots\": 86.54,\n    \"Standard_Earbuds\": 46.9,\n    \"Protein_Powder\": 40.29\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.3. The customer is evaluating Premium_Watch, Mechanical_Keyboard, Gaming_Mouse, Office_Chair, Smart_Speaker and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 197.79}, {\"name\": \"Mechanical_Keyboard\", \"cost\": 72.91}, {\"name\": \"Gaming_Mouse\", \"cost\": 50.33}, {\"name\": \"Office_Chair\", \"cost\": 126.28}, {\"name\": \"Smart_Speaker\", \"cost\": 63.0}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.3}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 247.24,\n    \"Mechanical_Keyboard\": 91.14,\n    \"Gaming_Mouse\": 62.91,\n    \"Office_Chair\": 157.85,\n    \"Smart_Speaker\": 78.75\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.84. The customer is evaluating Running_Shoes, Premium_Watch, Designer_Handbag and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Running_Shoes\", \"cost\": 57.76}, {\"name\": \"Premium_Watch\", \"cost\": 138.53}, {\"name\": \"Designer_Handbag\", \"cost\": 409.45}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.84}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Running_Shoes\": 72.2,\n    \"Premium_Watch\": 173.16,\n    \"Designer_Handbag\": 511.81\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.07 and sentiment=0.49. The customer is evaluating Air_Fryer, Leather_Boots, Coffee_Beans_1kg, Protein_Powder, Budget_Cable and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 136.92}, {\"name\": \"Leather_Boots\", \"cost\": 97.3}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 23.46}, {\"name\": \"Protein_Powder\", \"cost\": 19.86}, {\"name\": \"Budget_Cable\", \"cost\": 2.4}]\nMarket Conditions: {\"inflation\": 0.07, \"sentiment\": 0.49}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 171.15,\n    \"Leather_Boots\": 121.62,\n    \"Coffee_Beans_1kg\": 29.33,\n    \"Protein_Powder\": 24.82,\n    \"Budget_Cable\": 3.0\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.39. The customer is evaluating Premium_Watch, Leather_Boots, Air_Fryer, Protein_Powder and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Premium_Watch\", \"cost\": 197.03}, {\"name\": \"Leather_Boots\", \"cost\": 120.76}, {\"name\": \"Air_Fryer\", \"cost\": 65.58}, {\"name\": \"Protein_Powder\", \"cost\": 37.69}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.39}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Premium_Watch\": 246.29,\n    \"Leather_Boots\": 150.95,\n    \"Air_Fryer\": 81.97,\n    \"Protein_Powder\": 47.11\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.15 and sentiment=0.74. The customer is evaluating Office_Chair, Designer_Handbag, Cotton_Tee and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Office_Chair\", \"cost\": 115.95}, {\"name\": \"Designer_Handbag\", \"cost\": 241.29}, {\"name\": \"Cotton_Tee\", \"cost\": 14.23}]\nMarket Conditions: {\"inflation\": 0.15, \"sentiment\": 0.74}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Office_Chair\": 144.94,\n    \"Designer_Handbag\": 301.61,\n    \"Cotton_Tee\": 17.79\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.06 and sentiment=0.45. The customer is evaluating Budget_Cable, Standard_Earbuds, Cotton_Tee, Premium_Watch and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Budget_Cable\", \"cost\": 2.75}, {\"name\": \"Standard_Earbuds\", \"cost\": 56.18}, {\"name\": \"Cotton_Tee\", \"cost\": 13.99}, {\"name\": \"Premium_Watch\", \"cost\": 159.1}]\nMarket Conditions: {\"inflation\": 0.06, \"sentiment\": 0.45}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Budget_Cable\": 3.44,\n    \"Standard_Earbuds\": 70.22,\n    \"Cotton_Tee\": 17.49,\n    \"Premium_Watch\": 198.88\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.11 and sentiment=0.32. The customer is evaluating Coffee_Beans_1kg, Budget_Cable, Smart_Speaker, Office_Chair and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Coffee_Beans_1kg\", \"cost\": 11.79}, {\"name\": \"Budget_Cable\", \"cost\": 7.63}, {\"name\": \"Smart_Speaker\", \"cost\": 68.78}, {\"name\": \"Office_Chair\", \"cost\": 197.93}]\nMarket Conditions: {\"inflation\": 0.11, \"sentiment\": 0.32}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Coffee_Beans_1kg\": 14.74,\n    \"Budget_Cable\": 9.54,\n    \"Smart_Speaker\": 85.97,\n    \"Office_Chair\": 247.41\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.09 and sentiment=0.85. The customer is evaluating Designer_Handbag, Cotton_Tee, Gaming_Mouse, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Designer_Handbag\", \"cost\": 391.61}, {\"name\": \"Cotton_Tee\", \"cost\": 12.52}, {\"name\": \"Gaming_Mouse\", \"cost\": 31.74}, {\"name\": \"Running_Shoes\", \"cost\": 41.72}]\nMarket Conditions: {\"inflation\": 0.09, \"sentiment\": 0.85}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Designer_Handbag\": 489.51,\n    \"Cotton_Tee\": 15.65,\n    \"Gaming_Mouse\": 39.67,\n    \"Running_Shoes\": 52.15\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.04 and sentiment=0.36. The customer is evaluating Leather_Boots, Office_Chair, Coffee_Beans_1kg, Blender, Running_Shoes and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Leather_Boots\", \"cost\": 102.62}, {\"name\": \"Office_Chair\", \"cost\": 118.95}, {\"name\": \"Coffee_Beans_1kg\", \"cost\": 19.41}, {\"name\": \"Blender\", \"cost\": 30.29}, {\"name\": \"Running_Shoes\", \"cost\": 82.39}]\nMarket Conditions: {\"inflation\": 0.04, \"sentiment\": 0.36}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Leather_Boots\": 128.28,\n    \"Office_Chair\": 148.69,\n    \"Coffee_Beans_1kg\": 24.26,\n    \"Blender\": 37.86,\n    \"Running_Shoes\": 102.99\n  }\n}"
+    },
+    {
+        "instruction": "Set prices for the following products based on the market scenario.\n\nScenario: Market conditions show inflation=0.05 and sentiment=0.53. The customer is evaluating Air_Fryer, Smart_Speaker, Blender, Cotton_Tee, Leather_Boots and is price-sensitive but still values perceived quality. Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins.",
+        "input": "Products: [{\"name\": \"Air_Fryer\", \"cost\": 121.93}, {\"name\": \"Smart_Speaker\", \"cost\": 81.02}, {\"name\": \"Blender\", \"cost\": 80.55}, {\"name\": \"Cotton_Tee\", \"cost\": 9.63}, {\"name\": \"Leather_Boots\", \"cost\": 113.89}]\nMarket Conditions: {\"inflation\": 0.05, \"sentiment\": 0.53}",
+        "output": "{\n  \"reasoning\": \"Determined by council logic.\",\n  \"prices\": {\n    \"Air_Fryer\": 152.41,\n    \"Smart_Speaker\": 101.27,\n    \"Blender\": 100.69,\n    \"Cotton_Tee\": 12.04,\n    \"Leather_Boots\": 142.36\n  }\n}"
+    }
+]

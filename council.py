@@ -9,7 +9,11 @@ load_dotenv()
 
 class Council:
     def __init__(self, api_key=None):
-        self.client = Groq(api_key=api_key or os.environ.get("GROQ_API_KEY"))
+        api_key = api_key or os.environ.get("GROQ_API_KEY")
+        # Allow running without external API credentials (e.g., local smoke tests,
+        # CI, or Hugging Face Spaces builds). In that case we fall back to simple,
+        # deterministic text generation and heuristic pricing.
+        self.client = Groq(api_key=api_key) if api_key else None
         # Using 3 distinct models available on Groq
         self.narrator_model = "llama-3.1-70b-versatile"
         self.analyst_model = "mixtral-8x7b-32768"
@@ -97,7 +101,20 @@ class Council:
             f"Merge these into one polished, engaging 3-sentence narrative for an AI-CFO to read. Story: {base_story}. Trait: {critique}. Do not use labels, just storytelling."
         )
 
-        return final_scenario.strip()
+        final_scenario = (final_scenario or "").strip()
+        if final_scenario and final_scenario != "CALL_FAILED":
+            return final_scenario
+
+        # Offline fallback (no API key / call failure).
+        inflation = macro_params.get("inflation")
+        sentiment = macro_params.get("sentiment")
+        product_names = [p.get("name") for p in (products or []) if isinstance(p, dict) and p.get("name")]
+        basket = ", ".join(product_names[:5]) if product_names else "a small basket of everyday goods"
+        return (
+            f"Market conditions show inflation={inflation} and sentiment={sentiment}. "
+            f"The customer is evaluating {basket} and is price-sensitive but still values perceived quality. "
+            "Competitors are adjusting prices cautiously, creating opportunities for smart, defensible margins."
+        )
 
     def generate_golden_price(self, dna_dict, products, macro_params):
         """
@@ -116,6 +133,8 @@ class Council:
         return {p['name']: round(p['cost'] * (1 + margin), 2) for p in products}
 
     def _call_groq(self, model, prompt):
+        if self.client is None:
+            return "CALL_FAILED"
         try:
             completion = self.client.chat.completions.create(
                 model=model,
