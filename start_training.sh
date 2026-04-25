@@ -7,9 +7,9 @@
 # training suite (tools/run_long_training.py) which your friend recently added!
 # ==============================================================================
 
-# 1. Replace these with your actual keys before running!
-export HF_TOKEN="REDACTED_HF_TOKEN"
-export GROQ_API_KEY="REDACTED_GROQ_KEY"
+# 1. Set these as Hugging Face Space "Secrets" (recommended):
+# - HF_TOKEN
+# - GROQ_API_KEY
 
 # 2. (Optional) Force the base model if needed
 export BASE_MODEL_NAME="unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
