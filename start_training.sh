@@ -8,8 +8,8 @@
 # ==============================================================================
 
 # 1. Replace these with your actual keys before running!
-export HF_TOKEN="your_REDACTED_HF_TOKEN_here"
-export GROQ_API_KEY="your_groq_api_key_here"
+export HF_TOKEN="REDACTED_HF_TOKEN"
+export GROQ_API_KEY="REDACTED_GROQ_KEY"
 
 # 2. (Optional) Force the base model if needed
 export BASE_MODEL_NAME="unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
