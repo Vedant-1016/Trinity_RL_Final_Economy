@@ -1,0 +1,11 @@
+# GPU training stack for train_llm.py (Unsloth + TRL). Install *after* CUDA PyTorch, e.g.:
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+#   pip install -r requirements-training.txt
+unsloth
+trl>=0.9.0
+transformers>=4.40.0
+datasets>=2.19.0
+accelerate>=0.30.0
+peft>=0.10.0
+bitsandbytes>=0.43.0
+safetensors>=0.4.0

@@ -33,6 +33,20 @@ if ! python -c "import dotenv" 2>/dev/null; then
   pip install --no-cache-dir -q "python-dotenv>=1.0.0"
 fi
 
+# Lean Space images may ship without Unsloth/TRL; train_llm.py needs them.
+if ! python -c "import unsloth" 2>/dev/null; then
+  if [[ -f "$ROOT/requirements-training.txt" ]]; then
+    echo ">>> unsloth not found; installing CUDA PyTorch + requirements-training.txt (first run, a few minutes)..."
+    pip install --no-cache-dir "torch" "torchvision" "torchaudio" \
+      --index-url https://download.pytorch.org/whl/cu124
+    pip install --no-cache-dir -r "$ROOT/requirements-training.txt"
+  else
+    echo "FATAL: unsloth not installed and requirements-training.txt missing at $ROOT"
+    echo "      Push the latest repo, or: pip install unsloth trl transformers"
+    exit 1
+  fi
+fi
+
 if [[ ! -f "$ROOT/.env" ]]; then
   if [[ -z "${GROQ_API_KEY:-}" ]]; then
     echo "Warning: no .env in repo root and GROQ_API_KEY is not set. Use Space Secrets or: export GROQ_API_KEY=..."

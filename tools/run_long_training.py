@@ -1,9 +1,12 @@
 import argparse
+import importlib
 import os
 import subprocess
 import sys
 import time
 from datetime import datetime
+from pathlib import Path
+from typing import Optional
 
 try:
     from dotenv import load_dotenv
@@ -39,6 +42,52 @@ def _run_and_stream(command, env, log_file_path):
         raise RuntimeError(f"Command failed with exit code {return_code}: {' '.join(command)}")
 
 
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parent.parent
+
+
+def _ensure_training_stack() -> None:
+    """Install Unsloth/TRL on first use (e.g. user runs this script; start_training.sh also installs)."""
+    try:
+        import unsloth  # noqa: F401
+
+        return
+    except (ModuleNotFoundError, ImportError):
+        pass
+    root = _repo_root()
+    req = root / "requirements-training.txt"
+    if not req.is_file():
+        raise EnvironmentError(
+            "unsloth is not installed, and requirements-training.txt is missing at the repo root.\n"
+            "From /home/user/app run:\n"
+            "  pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124\n"
+            "  pip install --no-cache-dir unsloth 'trl>=0.9' transformers datasets accelerate peft bitsandbytes safetensors"
+        ) from None
+    print(">>> unsloth not found; installing CUDA PyTorch + requirements-training.txt (first run, a few minutes)...", flush=True)
+    subprocess.check_call(
+        [
+            sys.executable,
+            "-m",
+            "pip",
+            "install",
+            "--no-cache-dir",
+            "torch",
+            "torchvision",
+            "torchaudio",
+            "--index-url",
+            "https://download.pytorch.org/whl/cu124",
+        ],
+        env=os.environ.copy(),
+    )
+    subprocess.check_call(
+        [sys.executable, "-m", "pip", "install", "--no-cache-dir", "-r", str(req)],
+        env=os.environ.copy(),
+    )
+    importlib.invalidate_caches()
+    import unsloth  # noqa: F401
+    print(">>> unsloth import OK", flush=True)
+
+
 def _estimate_time_minutes(heuristic_scenarios, council_scenarios):
     # Conservative planning estimate on A10G:
     # heuristic scenario: ~2.0 sec average
@@ -66,16 +115,47 @@ def main():
     if not os.environ.get("HF_TOKEN"):
         print(">>> WARNING: HF_TOKEN not set. Private/gated model pulls may fail.")
 
+    # train_llm.py needs unsloth+trl; this script is often run without bash start_training.sh
+    if os.path.isfile(_repo_root() / "train_llm.py"):
+        _ensure_training_stack()
+
+    torch_import_error: Optional[Exception] = None
+    has_cuda = False
     try:
         import torch  # type: ignore
-        has_cuda = torch.cuda.is_available()
-    except Exception:
-        has_cuda = False
+
+        has_cuda = bool(torch.cuda.is_available())
+    except Exception as exc:  # noqa: BLE001
+        torch_import_error = exc
 
     if not has_cuda:
-        raise EnvironmentError(
-            "CUDA GPU not detected in this runtime. Run this script on your A10G/HF GPU runtime."
+        details = []
+        if torch_import_error is not None:
+            details.append(f"PyTorch import failed: {torch_import_error!r}")
+        else:
+            try:
+                import torch  # type: ignore
+
+                details.append(
+                    f"PyTorch {torch.__version__}  bundled_cuda={getattr(torch.version, 'cuda', None)!r}  "
+                    f"is_available={torch.cuda.is_available()}"
+                )
+            except Exception:  # noqa: BLE001
+                pass
+        details.append(
+            "The GPU driver can work (nvidia-smi) while this Python has no usable CUDA in PyTorch "
+            "(CPU-only wheel, missing install, or wrong interpreter)."
         )
+        details.append(
+            "Example fix in this same terminal: install a CUDA build, then training deps, e.g.\n"
+            "  pip install -U 'torch' --index-url https://download.pytorch.org/whl/cu124\n"
+            "  pip install -U 'xformers' 'bitsandbytes'  # as needed for unsloth/trl"
+        )
+        raise EnvironmentError(
+            "CUDA GPU not available to this Python (torch). "
+            "Run on a GPU host and use a PyTorch build with CUDA.\n"
+            + "\n".join(details)
+        ) from torch_import_error
 
     os.makedirs("docs", exist_ok=True)
     env = os.environ.copy()

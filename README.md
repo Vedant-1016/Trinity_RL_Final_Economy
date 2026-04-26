@@ -12,12 +12,27 @@ suggested_storage: small
 
 ## Pricing Pro (Training Space)
 
-This Space is set up for **GPU training + JupyterLab** for the Pricing Pro / OpenEnv project.
+**Canonical Space:** [Het0456 / OpenEnv_training](https://huggingface.co/spaces/Het0456/OpenEnv_training) — **Docker + JupyterLab** for Pricing Pro / OpenEnv. Same training defaults as the Colab notebook: **SFT 5, heuristic 50, council 10** (one metrics row per scenario).
 
 ### Link this repo to the Space (one-time)
 
-1. In Hugging Face: open this Space → **Settings** → confirm the **Repository** is the same Git repo that contains `tools/run_long_training.py`.
-2. After every push that should change training code: **Settings → Factory rebuild** (or trigger a new build) so the Docker image includes the latest files.
+1. In Hugging Face: open **[OpenEnv training Space](https://huggingface.co/spaces/Het0456/OpenEnv_training)** → **Settings** → connect the **Git** repository that contains `tools/run_long_training.py` (or push to the Space’s git remote — see below).
+2. After every code push: **Settings → Factory rebuild** so the Docker image includes the latest files.
+
+**Push this repo to the Space from your laptop** (Hugging Face CLI logged in, or a token with `write`):
+
+```bash
+git remote add openenv https://huggingface.co/spaces/Het0456/OpenEnv_training
+# (skip if 'openenv' exists: git remote set-url openenv https://huggingface.co/spaces/Het0456/OpenEnv_training)
+# If push is rejected: remote has commits you don’t have yet — integrate then push:
+#   git pull openenv main --rebase
+#   git push openenv main
+# Auth: use a Hugging Face **write** token (not your account password). Run once:
+#   pip install -U huggingface_hub && huggingface-cli login
+git push openenv main
+```
+
+Use your branch name if it is not `main`. The Space will rebuild from the new commit.
 
 ### Run training (recommended)
 
@@ -97,7 +112,7 @@ bash /tmp/bootstrap_training_pod.sh
 
 ### OpenEnv deliverables (links)
 
-- [Hugging Face training Space (Docker + JupyterLab)](https://huggingface.co/spaces) — set this to your live Space URL after you publish; it must match the repo wired in Space settings.
+- [Hugging Face OpenEnv training Space (Docker + JupyterLab)](https://huggingface.co/spaces/Het0456/OpenEnv_training) — live GPU training / Jupyter; wire your Git repo in Space **Settings** or `git push` to the Space remote.
 - [Project writeup (GitHub repository)](https://github.com/Vedant-1016/Trinity_RL_Final_Economy) — add a short blog, video, or slide deck URL here when you have one, or use this repo for the written report.
 
 Training notebook (also required on disk for checks): `colab/quick_train_pricing_pro.ipynb` (in-repo path; open in Colab from GitHub with **File → Open notebook** on that path if the repo is public).

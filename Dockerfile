@@ -91,6 +91,12 @@ USER user
 RUN --mount=target=requirements.txt,source=requirements.txt \
     pip install --no-cache-dir --upgrade -r requirements.txt
 
+# GPU PyTorch + Unsloth / TRL (train_llm.py) — not in base requirements to keep that layer small.
+RUN --mount=target=requirements-training.txt,source=requirements-training.txt \
+    pip install --no-cache-dir "torch" "torchvision" "torchaudio" \
+    --index-url https://download.pytorch.org/whl/cu124 && \
+    pip install --no-cache-dir -r requirements-training.txt
+
 # App files
 COPY --chown=user:user . /home/user/app
 

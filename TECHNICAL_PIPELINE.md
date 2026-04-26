@@ -96,6 +96,6 @@ Using `sft_dataset.json` (from `generate_sft_data.py`), SFT training runs a **sh
 
 The **public-facing product UI** is the Vite / React app under `Trinity_RL_Final_Economy-main/` (deploy e.g. to Vercel) with the marketing home page, NAFO console, and embedded dashboard sections.
 
-*   **Repro training:** `colab/quick_train_pricing_pro.ipynb` runs a small 3-phase training path with the user’s own `GROQ_API_KEY`, writes `training_metrics.json`, and exports plots to `docs/`. See `colab/README.md`.
+*   **Repro training:** [OpenEnv training Space](https://huggingface.co/spaces/Het0456/OpenEnv_training) (Jupyter + GPU) and `colab/quick_train_pricing_pro.ipynb` (Colab) use the same phase sizes: **SFT 5, heuristic 50, council 10**; they write `training_metrics.json` and `docs/*.png` via `tools/run_long_training.py` / `start_training.sh`. See `colab/README.md` and the root `README.md` for `git push` to the Space.
 
 *   The legacy **Streamlit** dashboard and **post-demo `patch_update.py` RLHF** loop have been **removed** to avoid duplicate UIs; training remains fully covered by `train_llm.py`, `tools/run_long_training.py`, and the Colab notebook.

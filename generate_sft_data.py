@@ -99,12 +99,21 @@ def generate_sft_dataset(num_samples=5, out_path="sft_dataset.json", seed=None, 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate SFT dataset for Pricing Pro.")
-    _default_sft = int(os.environ.get("SFT_SAMPLES", "5"))
-    parser.add_argument("--num-samples", type=int, default=_default_sft)
+    # Do not use SFT_SAMPLES from the environment as the default: HF Spaces / shells often
+    # still have SFT_SAMPLES=200 from older configs, which would print "200 samples" even
+    # when you want 5. Use --num-samples (run_long_training.py passes it) or pass 5 explicitly.
+    parser.add_argument(
+        "--num-samples",
+        type=int,
+        default=5,
+        help="Number of SFT rows to generate (default 5). Prefer passing this; do not rely on SFT_SAMPLES env alone.",
+    )
     parser.add_argument("--out", type=str, default="sft_dataset.json")
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--offline", action="store_true", help="Disable Groq calls and use heuristic generation.")
     args = parser.parse_args()
+    # Match env to CLI so anything that still reads SFT_SAMPLES in-process (or old tools) sees the same count.
+    os.environ["SFT_SAMPLES"] = str(args.num_samples)
 
     generate_sft_dataset(
         num_samples=args.num_samples,
