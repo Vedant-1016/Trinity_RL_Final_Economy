@@ -1,9 +1,56 @@
+import importlib
 import os
 import json
-import sys
-import torch
 import re
 import subprocess
+import sys
+
+# Install training stack on first use (e.g. Space not Factory-rebuilt, or old run_long_training on disk).
+def _ensure_unsloth_for_subprocess() -> None:
+    try:
+        import unsloth  # noqa: F401
+        return
+    except (ModuleNotFoundError, ImportError):
+        pass
+    root = os.path.dirname(os.path.abspath(__file__))
+    req = os.path.join(root, "requirements-training.txt")
+    if not os.path.isfile(req):
+        print(
+            "FATAL: unsloth is not installed and requirements-training.txt is not in the repo root.\n"
+            "  pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124\n"
+            "  pip install --no-cache-dir -r /home/user/app/requirements-training.txt",
+            file=sys.stderr,
+        )
+        raise SystemExit(1) from None
+    print(
+        ">>> unsloth not found; installing CUDA PyTorch + requirements-training.txt (one-time, a few min)...",
+        flush=True,
+    )
+    subprocess.check_call(
+        [
+            sys.executable,
+            "-m",
+            "pip",
+            "install",
+            "--no-cache-dir",
+            "torch",
+            "torchvision",
+            "torchaudio",
+            "--index-url",
+            "https://download.pytorch.org/whl/cu124",
+        ],
+        env=os.environ.copy(),
+    )
+    subprocess.check_call(
+        [sys.executable, "-m", "pip", "install", "--no-cache-dir", "-r", req],
+        env=os.environ.copy(),
+    )
+    importlib.invalidate_caches()
+
+
+_ensure_unsloth_for_subprocess()
+
+import torch
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
