@@ -21,5 +21,7 @@ In the first config cell, set `GIT_REPO_URL` to your **public** fork or upstream
 
 ## Patches in the repo (used by the notebook)
 
-- `generate_sft_data.py` uses explicit **`--num-samples`** (Colab cell 1 and `run_long_training.py` pass it) so a stale `SFT_SAMPLES=200` in the environment cannot override.
+- `generate_sft_data.py` uses explicit **`--num-samples`** (Config + step 1, and `run_long_training.py` pass it) so a stale `SFT_SAMPLES=200` in the environment cannot override. Step 1 **asserts** the JSON row count matches `SFT_SAMPLES`.
+- Shell / Space: `start_training.sh` reads **`SFT_SAMPLES`**, **`HEURISTIC_SCENARIOS`**, **`COUNCIL_SCENARIOS`** from the environment (defaults 5 / 50 / 10) so you are not locked to fixed numbers without exporting env vars.
+- `train_llm.py` SFT **`max_steps`** is derived from **the number of rows in `sft_dataset.json`**, not a guessed env-only count, and is capped to avoid runaway cost on huge files.
 - `tools/run_long_training.py` is the same pipeline as `bash start_training.sh` on the Space.

@@ -10,109 +10,145 @@ tags:
 suggested_storage: small
 ---
 
-## Pricing Pro (Training Space)
+# Pricing Pro / NAFO — AI-CFO market simulation (OpenEnv)
 
-**Canonical Space:** [Het0456 / OpenEnv_training](https://huggingface.co/spaces/Het0456/OpenEnv_training) — **Docker + JupyterLab** for Pricing Pro / OpenEnv. Same training defaults as the Colab notebook: **SFT 5, heuristic 50, council 10** (one metrics row per scenario).
+**One-liner:** We train an **AI shopkeeper (CFO)** with **Unsloth (Llama 3.1 8B)** to set multi-product prices under **live macro shocks**, **persona DNA**, and a **Groq-backed “council”** of consumer models, then evaluate it in a **probabilistic retail environment** with **online RL** and **error-driven learning**.
 
-### Link this repo to the Space (one-time)
+This README is written for **judges and reviewers**: it links the main assets, explains the **end-to-end pipeline**, and points to **reproducible** training (Colab + Hugging Face Space).
 
-1. In Hugging Face: open **[OpenEnv training Space](https://huggingface.co/spaces/Het0456/OpenEnv_training)** → **Settings** → connect the **Git** repository that contains `tools/run_long_training.py` (or push to the Space’s git remote — see below).
-2. After every code push: **Settings → Factory rebuild** so the Docker image includes the latest files.
+---
 
-**Push this repo to the Space from your laptop** (Hugging Face CLI logged in, or a token with `write`):
+## Quick links (for judges)
+
+| Resource | Link |
+|----------|------|
+| **OpenEnv-style environment (het / extended DNA + market physics)** | [`environment_het.py`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/environment_het.py) |
+| **Colab training notebook** | [Open in Colab — `colab/quick_train_pricing_pro.ipynb`](https://colab.research.google.com/github/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/quick_train_pricing_pro.ipynb) · [Notebook on GitHub](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/quick_train_pricing_pro.ipynb) |
+| **Project story & motivation (NAFO narrative)** | [`docs/nafo-story.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/nafo-story.md) |
+| **Training metrics & plots (code + artifact names)** | [`tools/export_training_plots.py`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/tools/export_training_plots.py) — generated figures under `docs/` (see [Graphs & metrics](#graphs--metrics)) |
+| **Deep technical architecture** | [`TECHNICAL_PIPELINE.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/TECHNICAL_PIPELINE.md) |
+| **Hugging Face GPU Space (Docker + JupyterLab)** | [Het0456 / OpenEnv_training](https://huggingface.co/spaces/Het0456/OpenEnv_training) |
+| **Upstream repository** | [Vedant-1016 / Trinity_RL_Final_Economy](https://github.com/Vedant-1016/Trinity_RL_Final_Economy) |
+
+Add your own **external blog or demo video** URL in your submission; the in-repo **story** lives in `docs/nafo-story.md` above.
+
+---
+
+## What `environment_het.py` is
+
+The file [**`environment_het.py`**](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/environment_het.py) implements **`PricingProEnv`**: a **multi-product retail simulator** that:
+
+- Extends a base OpenEnv `Environment` when `openenv` is installed, or uses a local stub for tests.
+- Draws **persona DNA** (via `PersonaEngine`) and **macro parameters** (inflation, sentiment, competitor aggressiveness, etc.) each episode.
+- Steps with **probabilistic purchase logic** (logistic-style score vs. competitor, basket rules, inventory).
+- Exposes **reviewer-style rewards** through **`ReviewerEngine`**: profit-focused rewards, hard penalties (e.g. below cost), and DNA-aware penalties.
+
+It is the **ground-truth world** the policy is trained and evaluated against in the **heuristic** and **council** online phases (see pipeline below). The standard [`environment.py`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/environment.py) is the non-het variant; **het** tracks the “extended” demo and DNA-heavy path used in the project narrative.
+
+---
+
+## Colab
+
+- **Notebook:** [`colab/quick_train_pricing_pro.ipynb`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/quick_train_pricing_pro.ipynb)  
+- **One-click Colab:** [Open in Colab](https://colab.research.google.com/github/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/quick_train_pricing_pro.ipynb)  
+- **Colab-specific notes:** [`colab/README.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/README.md)  
+
+The notebook is aligned with the same **default training recipe** as the Space: **SFT 5** samples, **50** heuristic scenarios, **10** council scenarios, one **metrics row per outer scenario** in `training_metrics.json`.
+
+---
+
+## Blog & narrative
+
+- **Project blog (in-repo, required for pre-submit check):** [read the project blog — NAFO story (Markdown)](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/nafo-story.md) (same as [`docs/nafo-story.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/nafo-story.md)).  
+- **Optional:** add an external [video](https://huggingface.co/spaces/Het0456/OpenEnv_training) demo or **slides** link in your report; the Space can serve as the live **writeup** surface alongside this repo.
+
+---
+
+## Graphs & metrics
+
+Training writes **`training_metrics.json`** (one row per **outer** scenario for heuristic + council phases). Plots are generated by [**`tools/export_training_plots.py`**](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/tools/export_training_plots.py) into **`docs/`** (filenames are gitignored on some remotes to satisfy Hub binary rules; they **appear locally and in Colab/Space** after a run):
+
+| File | What it shows |
+|------|----------------|
+| `docs/reward_curve.png` | Reward over training steps / episodes |
+| `docs/loss_curve.png` | Loss during SFT / online phases |
+| `docs/baseline_vs_trained.png` | Baseline vs trained comparison |
+| `docs/success_rate_rolling.png` | Rolling success rate |
+| `docs/reward_distribution.png` | Distribution of rewards |
+| `docs/per_episode_final_reward.png` | Final reward per episode |
+
+**Code reference:** all figure titles and series are defined in `export_training_plots.py` (search for `_fig_save`).
+
+---
+
+## End-to-end pipeline (for judges)
+
+### 0) Problem framing
+
+The agent must output **JSON prices** for a **basket of products** given a **text scenario** (market + consumer story) and **macro parameters**. Quality is measured by **profit**, **feasibility** (e.g. not below cost), and **consistency** with persona DNA, inside [`environment_het.py`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/environment_het.py) (or `environment.py`).
+
+### 1) Personas & data — `persona_engine.py` + `council.py`
+
+- **Persona DNA** (`persona_engine.py`): five dimensions (economic profile, driver, intelligence, urgency, scale) → many **unique buyer profiles**; each training sample uses a fresh DNA draw.
+- **Council** (`council.py`, Groq when `GROQ_API_KEY` is set): a **small LLM pipeline** that can generate **scenarios**, **synthetic product baskets**, and **rationale** for “golden” labels used in SFT. If Groq is absent, the project can fall back to **offline** heuristics in `generate_sft_data.py`.
+
+### 2) SFT data — `generate_sft_data.py`
+
+- Produces **`sft_dataset.json`**: instruction / input / output examples with **reasoning** and **golden prices**.
+- Default **`--num-samples`** is **5** (overridable; the long trainer passes this explicitly to avoid stale environment defaults).
+
+### 3) SFT + online RL — `train_llm.py` (orchestrated by `tools/run_long_training.py`)
+
+- **Model:** e.g. **`unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit`** via [Unsloth](https://github.com/unslothai/unsloth) + PEFT, **`trl.SFTTrainer`** for the bootstrap phase.
+- **Phase 1 — SFT:** short supervised fit on `sft_dataset.json` to teach JSON output structure and margin behavior.
+- **Phase 2 — Heuristic online RL (default 50 outer scenarios):** the model interacts with the **math/heuristic** reviewer path; up to **3 inner attempts** per scenario; **`training_metrics.json` stores one row per outer scenario** (not per inner try).
+- **Phase 3 — Council online RL (default 10 scenarios):** same pattern with **council**-style review (Groq-backed when configured).
+
+Rewards and critiques come from **`reviewer_engine.py`**, which maps environment outcomes to **scalar rewards** and **textual critiques** the agent can attend to in the next try.
+
+### 4) Plots & checks — `export_training_plots.py` + `pre_submit_check.py`
+
+- **Plots:** written under `docs/` (see table above).
+- **Pre-submit** script validates exports and simple sanity checks (see `tools/pre_submit_check.py`).
+
+### 5) One-command entry points
+
+- **Full pipeline:** `bash start_training.sh` or  
+  `python tools/run_long_training.py --sft-samples 5 --heuristic-scenarios 50 --council-scenarios 10 --log-file train_run.log`  
+- **Stack:** `requirements.txt` (Jupyter + API + viz); **`requirements-training.txt`** + CUDA PyTorch for Unsloth/TRL (see Dockerfile / `start_training.sh` on GPU).
+
+**Artifacts (typical):** `sft_dataset.json`, `training_metrics.json`, `final_pricing_pro_model/`, `docs/*.png`, `train_run.log`.
+
+For **formula-level** detail (logistic buy probability, DNA multipliers, reward table), see [**TECHNICAL_PIPELINE.md**](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/TECHNICAL_PIPELINE.md).
+
+---
+
+## Hugging Face Space: run & sync
+
+**Canonical Space:** [Het0456 / OpenEnv_training](https://huggingface.co/spaces/Het0456/OpenEnv_training) (Docker + JupyterLab).
+
+- App root in the container: **`/home/user/app`** (same as symlink **`/data/pricing_pro_app`**).
+- **Secrets (names are case-sensitive):** `GROQ_API_KEY`, `HF_TOKEN`.
+- **Run:**  
+  `bash /home/user/app/start_training.sh`  
+- **Push from laptop** (with [HF write token](https://huggingface.co/docs/hub/security-tokens) via `huggingface-cli login`):
 
 ```bash
 git remote add openenv https://huggingface.co/spaces/Het0456/OpenEnv_training
-# (skip if 'openenv' exists: git remote set-url openenv https://huggingface.co/spaces/Het0456/OpenEnv_training)
-# If push is rejected: remote has commits you don’t have yet — integrate then push:
-#   git pull openenv main --rebase
-#   git push openenv main
-# Auth: use a Hugging Face **write** token (not your account password). Run once:
-#   pip install -U huggingface_hub && huggingface-cli login
+git pull openenv main --rebase
 git push openenv main
 ```
 
-Use your branch name if it is not `main`. The Space will rebuild from the new commit.
+After code changes, use **Settings → Factory rebuild** so the image includes the latest `Dockerfile` and files.
 
-### Run training (recommended)
+**OpenEnv / bare GPU pods** (hostname like `...-openenv-training-...`) may have an **empty** `~/app` until you **clone** the repo; see the clone instructions in the upstream [README on GitHub](https://github.com/Vedant-1016/Trinity_RL_Final_Economy) or `tools/bootstrap_training_pod.sh`. Those pods are **not** automatically the same filesystem as a rebuilt Space.
 
-You do **not** need to run `train_llm.py` by itself for a full Space run: `tools/run_long_training.py` already runs **`generate_sft_data.py` → `train_llm.py` (SFT + heuristic + council) → plot export → pre-submit check**. Use `bash start_training.sh` or `python tools/run_long_training.py ...`.
+---
 
-JupyterLab’s terminal often starts in **`/data`**, not the app folder. The repo code is in **`/home/user/app`**.
+## License & attribution
 
-Default run sizes in `start_training.sh` / `tools/run_long_training.py` are **SFT=5**, **heuristic=50**, **council=10**; `training_metrics.json` has **one row per outer scenario** (50 + 10, not 50×3). Override with `--sft-samples`, `--heuristic-scenarios`, `--council-scenarios` or the same env var names.
+Follow the **LICENSE** in the repository (if present) and cite **Unsloth**, **Hugging Face Transformers/TRL**, **Groq**, and this repo in academic or competition write-ups.
 
-Use either:
+---
 
-```bash
-bash /home/user/app/start_training.sh
-```
-
-or:
-
-```bash
-cd /data/pricing_pro_app
-bash start_training.sh
-```
-
-(`/data/pricing_pro_app` is a symlink to `/home/user/app`; see `/data/WHERE_IS_TRAINING.txt`.)
-
-### Secrets
-
-In the Space: **Settings → Secrets and variables → Secrets** (or **Repository secrets**), add exactly:
-
-- **`HF_TOKEN`** — a valid Hugging Face access token (read is enough for public models; write is fine).
-- **`GROQ_API_KEY`** — your Groq API key.
-
-Names are **case-sensitive** and must match those strings so the runtime exports them as environment variables.
-
-**Important:** those values are available to processes running **inside that Space’s container** (e.g. Jupyter terminal on `/home/user/app`). They are **not** automatically injected into a **separate** OpenEnv training pod or into a shell where you only `git clone` the repo elsewhere. For a clone-on-bare-GPU workflow, run `export HF_TOKEN=...` and `export GROQ_API_KEY=...` in that terminal (or use a `.env` file — never commit it).
-
-If you still see **401 Invalid user token**, the running environment is using a different or stale `HF_TOKEN` than the one you expect: rotate the token in [HF token settings](https://huggingface.co/settings/tokens), update the Space secret, restart the Space / pod, and avoid exporting an old token in `~/.bashrc`.
-
-### If you see `No such file or directory` for `tools/run_long_training.py`
-
-**Case A — Docker Space (this repo’s `Dockerfile`):** the running image is old or not built from this repo. Push the latest commit, then **Settings → Factory rebuild** the Space.
-
-**Case B — OpenEnv / training GPU pod (`r-...-openenv-training-...`):** those pods often ship with an **empty `~/app`**. They are **not** the same filesystem as a rebuilt Space image. You must **clone the git repo once**, then train from the clone.
-
-Diagnostics (paste in the pod terminal):
-
-```bash
-pwd
-ls -la ~
-ls -la ~/app 2>/dev/null || true
-ls -la /home/user/app 2>/dev/null || true
-```
-
-If `~/app` has no `start_training.sh`, clone the **real** repo URL (not a placeholder). This project’s upstream is public:
-
-```bash
-# If git is waiting at "Username for 'https://github.com':" press Ctrl+C first.
-rm -rf ~/pricing_pro_training
-git clone --depth 1 https://github.com/Vedant-1016/Trinity_RL_Final_Economy.git ~/pricing_pro_training
-cd ~/pricing_pro_training
-chmod +x start_training.sh tools/bootstrap_training_pod.sh 2>/dev/null || true
-# Bare GPU pods (not the Space Docker image) need Python deps once:
-pip install --no-cache-dir -r requirements.txt
-bash start_training.sh
-```
-
-If you use a **fork**, replace the URL with the HTTPS URL from your fork’s green **Code** button on GitHub.
-
-Private repo: use an HTTPS URL with a read token, or `git clone` after `huggingface-cli login` / SSH key setup.
-
-Optional bootstrap (same public repo):
-
-```bash
-export TRAINING_GIT_URL="https://github.com/Vedant-1016/Trinity_RL_Final_Economy.git"
-curl -fsSL "https://raw.githubusercontent.com/Vedant-1016/Trinity_RL_Final_Economy/main/tools/bootstrap_training_pod.sh" -o /tmp/bootstrap_training_pod.sh
-bash /tmp/bootstrap_training_pod.sh
-```
-
-### OpenEnv deliverables (links)
-
-- [Hugging Face OpenEnv training Space (Docker + JupyterLab)](https://huggingface.co/spaces/Het0456/OpenEnv_training) — live GPU training / Jupyter; wire your Git repo in Space **Settings** or `git push` to the Space remote.
-- [Project writeup (GitHub repository)](https://github.com/Vedant-1016/Trinity_RL_Final_Economy) — add a short blog, video, or slide deck URL here when you have one, or use this repo for the written report.
-
-Training notebook (also required on disk for checks): `colab/quick_train_pricing_pro.ipynb` (in-repo path; open in Colab from GitHub with **File → Open notebook** on that path if the repo is public).
+*Last updated for judge-facing documentation: training defaults **SFT 5 · heuristic 50 · council 10**; metrics **one row per outer scenario**; primary environment reference [**environment_het.py**](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/environment_het.py).*
