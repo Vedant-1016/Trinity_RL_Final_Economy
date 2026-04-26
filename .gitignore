@@ -30,3 +30,6 @@ training_metrics.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Hugging Face Hub rejects binary image pushes; keep plots local or in Xet/LFS
+docs/*.png
