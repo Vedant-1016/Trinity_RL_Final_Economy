@@ -2,8 +2,16 @@ import os
 import json
 import re
 from groq import Groq
-from dotenv import load_dotenv, find_dotenv
 from product_catalog import sample_products
+
+try:
+    from dotenv import load_dotenv, find_dotenv
+except ImportError:
+    def load_dotenv(*_a, **_k):
+        return False
+
+    def find_dotenv(*_a, **_k):
+        return ""
 
 # Load `.env` robustly (works from repo root or nested folder).
 # We avoid printing or otherwise exposing secrets.

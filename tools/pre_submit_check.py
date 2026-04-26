@@ -14,7 +14,7 @@ REQUIRED_IMAGE_FILES = [
 REQUIRED_EXISTENCE_FILES = [
     "openenv.yaml",
     "train_llm.py",
-    "notebooks/train_colab.ipynb",
+    "colab/quick_train_pricing_pro.ipynb",
     "README.md",
 ]
 
@@ -102,10 +102,13 @@ def check_readme_links():
     else:
         status = fail("README is missing a valid external writeup link") and status
 
-    if "(notebooks/train_colab.ipynb)" in content or "notebooks/train_colab.ipynb" in content:
+    if (
+        "colab/quick_train_pricing_pro.ipynb" in content
+        or "quick_train_pricing_pro.ipynb" in content
+    ):
         ok("README links the training notebook")
     else:
-        status = fail("README missing notebook link") and status
+        status = fail("README missing notebook link (e.g. colab/quick_train_pricing_pro.ipynb)") and status
 
     return status
 

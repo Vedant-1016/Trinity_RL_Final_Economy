@@ -50,7 +50,7 @@ def _offline_margin(dna_dict, macro_params):
     return max(0.08, min(margin, 0.45))
 
 
-def generate_sft_dataset(num_samples=200, out_path="sft_dataset.json", seed=None, offline=False):
+def generate_sft_dataset(num_samples=5, out_path="sft_dataset.json", seed=None, offline=False):
     engine = PersonaEngine()
     has_groq_key = bool(os.environ.get("GROQ_API_KEY"))
     use_offline = offline or not has_groq_key
@@ -99,7 +99,8 @@ def generate_sft_dataset(num_samples=200, out_path="sft_dataset.json", seed=None
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate SFT dataset for Pricing Pro.")
-    parser.add_argument("--num-samples", type=int, default=200)
+    _default_sft = int(os.environ.get("SFT_SAMPLES", "5"))
+    parser.add_argument("--num-samples", type=int, default=_default_sft)
     parser.add_argument("--out", type=str, default="sft_dataset.json")
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--offline", action="store_true", help="Disable Groq calls and use heuristic generation.")

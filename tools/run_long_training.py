@@ -4,9 +4,14 @@ import subprocess
 import sys
 import time
 from datetime import datetime
-from dotenv import load_dotenv
 
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:
+    # Fresh clones / bare pods may not have python-dotenv; secrets still work via os.environ.
+    pass
 
 
 def _run_and_stream(command, env, log_file_path):
@@ -46,9 +51,9 @@ def main():
     parser = argparse.ArgumentParser(
         description="Run full SFT + online training in one go with live logs."
     )
-    parser.add_argument("--sft-samples", type=int, default=200)
-    parser.add_argument("--heuristic-scenarios", type=int, default=2000)
-    parser.add_argument("--council-scenarios", type=int, default=25)
+    parser.add_argument("--sft-samples", type=int, default=5)
+    parser.add_argument("--heuristic-scenarios", type=int, default=50)
+    parser.add_argument("--council-scenarios", type=int, default=10)
     parser.add_argument("--skip-sft-generation", action="store_true")
     parser.add_argument("--log-file", default="train_run.log")
     args = parser.parse_args()
@@ -82,6 +87,10 @@ def main():
         args.heuristic_scenarios, args.council_scenarios
     )
     print(">>> FULL TRAINING RUN CONFIG")
+    print(
+        f"- Groq key set: {bool(os.environ.get('GROQ_API_KEY'))} "
+        f"(SFT data uses Groq when key present; heuristic RL does not use Groq)"
+    )
     print(f"- SFT samples: {args.sft_samples}")
     print(f"- Heuristic scenarios: {args.heuristic_scenarios}")
     print(f"- Council scenarios: {args.council_scenarios}")
@@ -94,17 +103,40 @@ def main():
     start = time.time()
     try:
         if not args.skip_sft_generation:
+            # Pass --num-samples on the CLI so a stale SFT_SAMPLES in the parent shell cannot override.
             _run_and_stream(
-                [sys.executable, "generate_sft_data.py"],
+                [
+                    sys.executable,
+                    "generate_sft_data.py",
+                    "--num-samples",
+                    str(args.sft_samples),
+                ],
                 env=env,
                 log_file_path=args.log_file,
             )
 
-        _run_and_stream(
-            [sys.executable, "train_llm.py"],
-            env=env,
-            log_file_path=args.log_file,
-        )
+        try:
+            _run_and_stream(
+                [sys.executable, "train_llm.py"],
+                env=env,
+                log_file_path=args.log_file,
+            )
+        except RuntimeError:
+            # If training stopped early, still generate plots from any metrics on disk.
+            metrics_path = "training_metrics.json"
+            if os.path.exists(metrics_path) and os.path.getsize(metrics_path) > 8:
+                print(
+                    "\n>>> Training subprocess failed; attempting plot export from existing metrics..."
+                )
+                try:
+                    _run_and_stream(
+                        [sys.executable, "tools/export_training_plots.py"],
+                        env=env,
+                        log_file_path=args.log_file,
+                    )
+                except RuntimeError as plot_exc:
+                    print(f">>> Plot export after partial training skipped: {plot_exc}")
+            raise
 
         _run_and_stream(
             [sys.executable, "tools/export_training_plots.py"],

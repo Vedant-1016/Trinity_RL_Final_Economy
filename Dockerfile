@@ -79,6 +79,13 @@ RUN --mount=target=/root/on_startup.sh,source=on_startup.sh,readwrite \
 
 RUN mkdir -p /data && chown user:user /data
 
+# JupyterLab opens in /data by default; link to the real repo so terminals work there too.
+RUN ln -sfn /home/user/app /data/pricing_pro_app && chown -h user:user /data/pricing_pro_app
+RUN printf '%s\n' \
+  'The training code lives in /home/user/app (also: cd /data/pricing_pro_app).' \
+  'Run training: bash /home/user/app/start_training.sh' \
+  > /data/WHERE_IS_TRAINING.txt && chown user:user /data/WHERE_IS_TRAINING.txt
+
 # Python packages
 USER user
 RUN --mount=target=requirements.txt,source=requirements.txt \
@@ -87,7 +94,7 @@ RUN --mount=target=requirements.txt,source=requirements.txt \
 # App files
 COPY --chown=user:user . /home/user/app
 
-RUN chmod +x /home/user/app/start_server.sh
+RUN chmod +x /home/user/app/start_server.sh /home/user/app/start_training.sh /home/user/app/tools/bootstrap_training_pod.sh
 
 # Jupyter template path for Python 3.10
 COPY --chown=user:user login.html /home/user/miniconda/lib/python3.10/site-packages/jupyter_server/templates/login.html

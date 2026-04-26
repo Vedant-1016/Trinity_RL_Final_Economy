@@ -1,5 +1,6 @@
 import os
 import json
+import sys
 import torch
 import re
 import subprocess
@@ -9,24 +10,71 @@ from transformers import TrainingArguments
 from persona_engine import PersonaEngine
 from reviewer_engine import ReviewerEngine
 from council import Council
-from dotenv import load_dotenv
-from huggingface_hub import login
+try:
+    from dotenv import load_dotenv
 
-load_dotenv()
+    load_dotenv()
+except ImportError:
+    pass
 
-# Authenticate with Hugging Face
-hf_token = os.environ.get("HF_TOKEN")
-if hf_token:
-    login(token=hf_token)
+def _drop_invalid_hf_tokens():
+    """
+    Do not call huggingface_hub.login() here: it hard-fails on bad tokens before training starts.
+    Validate with whoami; if invalid, remove tokens so public model pulls can proceed anonymously.
+    """
+    for key in ("HF_TOKEN", "HUGGING_FACE_HUB_TOKEN"):
+        token = (os.environ.get(key) or "").strip()
+        if not token:
+            continue
+        try:
+            from huggingface_hub import HfApi
+
+            HfApi(token=token).whoami()
+            print(f">>> Hugging Face token OK (from {key}).")
+            return
+        except Exception as exc:
+            err_one_line = str(exc).strip().split("\n")[0][:240]
+            print(
+                f">>> WARNING: {key} is invalid (Hub returned error). Removing only that variable.\n"
+                f">>>   {err_one_line}\n"
+                ">>> Fix: https://huggingface.co/settings/tokens — then export the new token or set Space secret HF_TOKEN."
+            )
+            os.environ.pop(key, None)
+
+    print(
+        ">>> No valid Hugging Face token in environment — using anonymous Hub access for public models."
+    )
+
+
+_drop_invalid_hf_tokens()
 
 # --- CONFIGURATION ---
 MODEL_NAME = os.environ.get("BASE_MODEL_NAME", "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit")
 MAX_SEQ_LENGTH = 2048
 OUTPUT_DIR = "pricing_pro_model"
 METRICS_PATH = "training_metrics.json"
-SFT_SAMPLES = int(os.environ.get("SFT_SAMPLES", "200"))
-HEURISTIC_SCENARIOS = int(os.environ.get("HEURISTIC_SCENARIOS", "2000"))
-COUNCIL_SCENARIOS = int(os.environ.get("COUNCIL_SCENARIOS", "25"))
+SFT_SAMPLES = int(os.environ.get("SFT_SAMPLES", "5"))
+HEURISTIC_SCENARIOS = int(os.environ.get("HEURISTIC_SCENARIOS", "50"))
+COUNCIL_SCENARIOS = int(os.environ.get("COUNCIL_SCENARIOS", "10"))
+
+
+def _atomic_write_json(path, data):
+    """Write JSON atomically so a crash mid-write does not corrupt metrics."""
+    directory = os.path.dirname(os.path.abspath(path)) or "."
+    os.makedirs(directory, exist_ok=True)
+    tmp_path = path + ".tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+    os.replace(tmp_path, path)
+
+
+def _export_plots_subprocess():
+    subprocess.run(
+        [sys.executable, "tools/export_training_plots.py"],
+        check=True,
+        cwd=os.path.dirname(os.path.abspath(__file__)) or ".",
+    )
+
 
 # --- 1. INITIALIZE MODELS & ENGINES ---
 print(">>> INITIALIZING AGENT MODEL (UNSLOTH)...")
@@ -78,9 +126,8 @@ def extract_json(text):
 
     # Fallback: return the last valid object generated.
     return candidates[-1]
-    return None
 
-# --- 2. PHASE 1: SFT BOOTSTRAP (200 SAMPLES) ---
+# --- 2. PHASE 1: SFT BOOTSTRAP ---
 def run_sft_phase():
     print(f"\n>>> STARTING PHASE 1: SFT BOOTSTRAP ({SFT_SAMPLES} SAMPLES)")
     if not os.path.exists("sft_dataset.json"):
@@ -114,8 +161,9 @@ def run_sft_phase():
         args = TrainingArguments(
             per_device_train_batch_size = 2,
             gradient_accumulation_steps = 4,
-            warmup_steps = 5,
-            max_steps = 60, 
+            warmup_steps = 2,
+            # Small run: scale steps to dataset size (5 samples default).
+            max_steps = max(3, min(30, SFT_SAMPLES * 3)),
             learning_rate = 2e-4,
             fp16 = not torch.cuda.is_bf16_supported(),
             bf16 = torch.cuda.is_bf16_supported(),
@@ -126,9 +174,18 @@ def run_sft_phase():
     trainer.train()
 
 # --- 3. PHASE 2: ONLINE RL (HEURISTIC & COUNCIL) ---
-def run_online_rl(num_scenarios=4000, mode="heuristic"):
+def run_online_rl(num_scenarios=50, mode="heuristic"):
     print(f"\n>>> STARTING PHASE 2: ONLINE RL ({mode.upper()})")
+    if mode == "council":
+        print(
+            ">>> Groq: ON for this phase (council scenarios + council_review use the Groq API if GROQ_API_KEY is set)."
+        )
+    else:
+        print(
+            ">>> Groq: OFF for heuristic phase (local math reviewer only; no Groq calls for scoring)."
+        )
     phase_metrics = []
+    # Exactly one JSON row per outer scenario (loops are training steps only, not extra "cases").
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5)
 
@@ -152,6 +209,7 @@ def run_online_rl(num_scenarios=4000, mode="heuristic"):
             "Output:"
         )
 
+        last_row = None
         for loop in range(3):
             # A. Model Predicts Price
             inputs = tokenizer([current_prompt], return_tensors = "pt").to("cuda")
@@ -204,43 +262,75 @@ def run_online_rl(num_scenarios=4000, mode="heuristic"):
             optimizer.step()
             optimizer.zero_grad()
 
-            phase_metrics.append({
+            last_row = {
                 "scenario": i,
                 "loop": loop + 1,
                 "mode": mode,
                 "reward": float(reward),
                 "loss": float(loss.detach().item()),
                 "success": bool(success),
-            })
+            }
 
             if success:
                 break # EARLY EXIT
             else:
                 current_prompt += f"\nCritique: {critique}. Adjust and try again."
 
+        if last_row is not None:
+            phase_metrics.append(last_row)
+
     return phase_metrics
 
 # --- EXECUTION ---
+# Full pipeline when run directly: SFT -> heuristic RL -> council RL -> metrics -> merged model -> plots.
+# Recommended entrypoint: `python tools/run_long_training.py` (also runs generate_sft_data, plots, pre_submit).
 if __name__ == "__main__":
-    # Ensure SFT data exists
-    if not os.path.exists("sft_dataset.json"):
-        from generate_sft_data import generate_sft_dataset
-        generate_sft_dataset(SFT_SAMPLES)
+    repo_root = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(repo_root)
 
-    run_sft_phase()
-    heuristic_metrics = run_online_rl(num_scenarios=HEURISTIC_SCENARIOS, mode="heuristic")
-    council_metrics = run_online_rl(num_scenarios=COUNCIL_SCENARIOS, mode="council")
-
-    all_metrics = heuristic_metrics + council_metrics
-    with open(METRICS_PATH, "w") as f:
-        json.dump(all_metrics, f, indent=2)
-    print(f">>> METRICS SAVED TO '{METRICS_PATH}'")
-    
-    model.save_pretrained_merged("final_pricing_pro_model", tokenizer, save_method = "lora")
-    print("\n>>> TRAINING COMPLETE. MODEL SAVED AS 'final_pricing_pro_model'")
-
+    model_saved_ok = False
     try:
-        subprocess.run(["python", "tools/export_training_plots.py"], check=True)
-        print(">>> TRAINING PLOTS EXPORTED TO docs/")
-    except Exception as e:
-        print(f">>> WARNING: Could not export plots automatically: {e}")
+        if not os.path.exists("sft_dataset.json"):
+            from generate_sft_data import generate_sft_dataset
+
+            generate_sft_dataset(SFT_SAMPLES)
+
+        run_sft_phase()
+        heuristic_metrics = run_online_rl(num_scenarios=HEURISTIC_SCENARIOS, mode="heuristic")
+        _atomic_write_json(METRICS_PATH, heuristic_metrics)
+        print(
+            f">>> CHECKPOINT: heuristic phase metrics written to '{METRICS_PATH}' "
+            f"({len(heuristic_metrics)} rows)"
+        )
+
+        council_metrics = run_online_rl(num_scenarios=COUNCIL_SCENARIOS, mode="council")
+        all_metrics = heuristic_metrics + council_metrics
+        _atomic_write_json(METRICS_PATH, all_metrics)
+        print(f">>> METRICS SAVED TO '{METRICS_PATH}' ({len(all_metrics)} rows)")
+
+        model.save_pretrained_merged("final_pricing_pro_model", tokenizer, save_method="lora")
+        model_saved_ok = True
+        print("\n>>> TRAINING COMPLETE. MODEL SAVED AS 'final_pricing_pro_model'")
+
+        try:
+            _export_plots_subprocess()
+            print(">>> TRAINING PLOTS EXPORTED TO docs/")
+        except Exception as e:
+            print(f">>> WARNING: Could not export plots automatically: {e}")
+    except BaseException as exc:
+        print(f"\n>>> TRAINING FAILED OR INTERRUPTED: {exc}")
+        raise
+    finally:
+        if not model_saved_ok:
+            try:
+                model.save_pretrained_merged(
+                    "final_pricing_pro_model_interrupted",
+                    tokenizer,
+                    save_method="lora",
+                )
+                print(
+                    ">>> Emergency: partial weights saved to 'final_pricing_pro_model_interrupted/' "
+                    "(use if normal save never ran)"
+                )
+            except Exception as save_exc:
+                print(f">>> Emergency model save skipped: {save_exc}")
