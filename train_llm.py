@@ -273,8 +273,9 @@ def run_online_rl(num_scenarios=50, mode="heuristic"):
             ai_data = extract_json(prediction)
             ai_prices = {}
             
-            if not ai_data or 'prices' not in ai_data:
-                success, reward, critique = False, -20.0, "Invalid JSON format. You MUST provide a JSON with the 'prices' key."
+            if not ai_data or 'prices' not in ai_data or not isinstance(ai_data['prices'], dict):
+                success, reward, critique = False, -20.0, "Invalid JSON format. You MUST provide a JSON with the 'prices' key as a dictionary."
+                print(f"\n--- DEBUG RAW PREDICTION ---\n{prediction}\n----------------------------\n")
             else:
                 ai_prices = ai_data['prices']
                 if mode == "heuristic":

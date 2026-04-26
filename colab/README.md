@@ -1,6 +1,6 @@
 # Colab: quick 3-phase training
 
-Open `quick_train_pricing_pro.ipynb` in [Google Colab](https://colab.research.google.com/) (**File → Upload notebook**) or use **Open in Colab** if you add a Colab badge to your main README.
+Open `train_colab.ipynb` in [Google Colab](https://colab.research.google.com/) (**File → Upload notebook**) or use **Open in Colab** if you add a Colab badge to your main README.
 
 ## What it does
 

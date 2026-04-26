@@ -1,5 +1,5 @@
 ---
-title: OpenEnv Training
+title: NaFO Training
 emoji: "💻🐳"
 colorFrom: gray
 colorTo: green
@@ -23,14 +23,14 @@ This README is written for **judges and reviewers**: it links the main assets, e
 | Resource | Link |
 |----------|------|
 | **OpenEnv-style environment (het / extended DNA + market physics)** | [`environment_het.py`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/environment_het.py) |
-| **Colab training notebook** | [Open in Colab — `colab/quick_train_pricing_pro.ipynb`](https://colab.research.google.com/github/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/quick_train_pricing_pro.ipynb) · [Notebook on GitHub](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/quick_train_pricing_pro.ipynb) |
-| **Project story & motivation (NAFO narrative)** | [`docs/nafo-story.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/nafo-story.md) |
+| **Colab training notebook** | [Open in Colab — `notebooks/train_colab.ipynb`](https://colab.research.google.com/github/Vedant-1016/Trinity_RL_Final_Economy/blob/main/notebooks/train_colab.ipynb) · [Notebook on GitHub](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/notebooks/train_colab.ipynb) |
+| **Project story & motivation (NAFO narrative)** | [`docs/blog.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/blog.md) |
 | **Training metrics & plots (code + artifact names)** | [`tools/export_training_plots.py`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/tools/export_training_plots.py) — generated figures under `docs/` (see [Graphs & metrics](#graphs--metrics)) |
 | **Deep technical architecture** | [`TECHNICAL_PIPELINE.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/TECHNICAL_PIPELINE.md) |
-| **Hugging Face GPU Space (Docker + JupyterLab)** | [Het0456 / OpenEnv_training](https://huggingface.co/spaces/Het0456/OpenEnv_training) |
+| **Hugging Face GPU Space (Docker + JupyterLab)** | [Vedant-10 / NaFO_training](https://huggingface.co/spaces/Vedant-10/NaFO_training) |
 | **Upstream repository** | [Vedant-1016 / Trinity_RL_Final_Economy](https://github.com/Vedant-1016/Trinity_RL_Final_Economy) |
 
-Add your own **external blog or demo video** URL in your submission; the in-repo **story** lives in `docs/nafo-story.md` above.
+Add your own **external blog or demo video** URL in your submission; the in-repo **story** lives in `docs/blog.md` above.
 
 ---
 
@@ -49,8 +49,8 @@ It is the **ground-truth world** the policy is trained and evaluated against in 
 
 ## Colab
 
-- **Notebook:** [`colab/quick_train_pricing_pro.ipynb`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/quick_train_pricing_pro.ipynb)  
-- **One-click Colab:** [Open in Colab](https://colab.research.google.com/github/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/quick_train_pricing_pro.ipynb)  
+- **Notebook:** [`notebooks/train_colab.ipynb`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/notebooks/train_colab.ipynb)  
+- **One-click Colab:** [Open in Colab](https://colab.research.google.com/github/Vedant-1016/Trinity_RL_Final_Economy/blob/main/notebooks/train_colab.ipynb)  
 - **Colab-specific notes:** [`colab/README.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/colab/README.md)  
 
 The notebook is aligned with the same **default training recipe** as the Space: **SFT 5** samples, **50** heuristic scenarios, **10** council scenarios, one **metrics row per outer scenario** in `training_metrics.json`.
@@ -59,7 +59,7 @@ The notebook is aligned with the same **default training recipe** as the Space: 
 
 ## Blog & narrative
 
-- **Project blog (in-repo, required for pre-submit check):** [read the project blog — NAFO story (Markdown)](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/nafo-story.md) (same as [`docs/nafo-story.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/nafo-story.md)).  
+- **Project blog (in-repo, required for pre-submit check):** [read the project blog — NAFO story (Markdown)](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/blog.md) (same as [`docs/blog.md`](https://github.com/Vedant-1016/Trinity_RL_Final_Economy/blob/main/docs/blog.md)).  
 - **Optional:** add an external [video](https://huggingface.co/spaces/Het0456/OpenEnv_training) demo or **slides** link in your report; the Space can serve as the live **writeup** surface alongside this repo.
 
 ---
@@ -78,6 +78,16 @@ Training writes **`training_metrics.json`** (one row per **outer** scenario for 
 | `docs/per_episode_final_reward.png` | Final reward per episode |
 
 **Code reference:** all figure titles and series are defined in `export_training_plots.py` (search for `_fig_save`).
+
+### Final Training Results
+
+**SFT Loss Curve (Phase 1 Convergence):**
+<br>
+![SFT Loss Curve](docs/loss_curve.png)
+
+**RL Agent Learning Trajectory (Phase 1 & 2):**
+<br>
+![RL Reward Curve](docs/reward_curve.png)
 
 ---
 
@@ -125,7 +135,7 @@ For **formula-level** detail (logistic buy probability, DNA multipliers, reward 
 
 ## Hugging Face Space: run & sync
 
-**Canonical Space:** [Het0456 / OpenEnv_training](https://huggingface.co/spaces/Het0456/OpenEnv_training) (Docker + JupyterLab).
+**Canonical Space:** [Vedant-10 / NaFO_training](https://huggingface.co/spaces/Vedant-10/NaFO_training) (Docker + JupyterLab).
 
 - App root in the container: **`/home/user/app`** (same as symlink **`/data/pricing_pro_app`**).
 - **Secrets (names are case-sensitive):** `GROQ_API_KEY`, `HF_TOKEN`.
@@ -134,7 +144,7 @@ For **formula-level** detail (logistic buy probability, DNA multipliers, reward 
 - **Push from laptop** (with [HF write token](https://huggingface.co/docs/hub/security-tokens) via `huggingface-cli login`):
 
 ```bash
-git remote add openenv https://huggingface.co/spaces/Het0456/OpenEnv_training
+git remote add openenv https://huggingface.co/spaces/Vedant-10/NaFO_training
 git pull openenv main --rebase
 git push openenv main
 ```
